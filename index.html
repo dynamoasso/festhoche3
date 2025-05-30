@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Galerie photos du Fest'Hoche #3</title>
+  <link rel="stylesheet" href="https://unpkg.com/photoswipe@5/dist/photoswipe.css">
+  <style>
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 10px;
+      padding: 20px;
+    }
+    .gallery a img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery" id="gallery">
+    <a href="galerie/image1.jpg" data-pswp-width="1200" data-pswp-height="800" target="_blank">
+      <img src="galerie/image1.jpg" alt="Légende 1" />
+    </a>
+    <a href="galerie/image2.jpg" data-pswp-width="1200" data-pswp-height="800" target="_blank">
+      <img src="galerie/image2.jpg" alt="Légende 2" />
+    </a>
+    <!-- Ajoute d'autres images ici -->
+  </div>
+
+  <script type="module">
+    import PhotoSwipeLightbox from 'https://unpkg.com/photoswipe@5/dist/photoswipe-lightbox.esm.min.js';
+
+    const lightbox = new PhotoSwipeLightbox({
+      gallery: '#gallery',
+      children: 'a',
+      pswpModule: () => import('https://unpkg.com/photoswipe@5/dist/photoswipe.esm.min.js')
+    });
+    lightbox.init();
+  </script>
+</body>
+</html>
