@@ -95,7 +95,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
-  gap: 8px;
+  gap: 10px;
   padding: 0;
   max-width: 1200px;
   margin: 0 auto;
@@ -109,11 +109,11 @@ export default {
   position: relative;
   padding: 0;
   margin: 0;
-  border: 2px solid transparent;
+  border: 3px solid white;
 }
 
 .gallery a:hover {
-  border: 2px solid #fff;
+  border: 3px solid #fff;
   transform: scale(1.02);
 }
 
