@@ -10,10 +10,8 @@
         :data-pswp-height="photo.height"
         :data-pswp-index="`${sectionId}-${index}`"
         :class="['photo-container', photo.width > photo.height ? 'horizontal' : 'vertical']"
-        :style="getRandomOffset()"
       >
         <img :src="`${publicPath}${photo.src}`" :alt="photo.alt" />
-        <p>{{photo.src}}</p>
       </a>
     </div>
   </div>
@@ -49,18 +47,6 @@ export default {
   setup(props) {
     const publicPath = process.env.BASE_URL || '/';
 
-    // Function to generate random offset for deconstructed effect
-    const getRandomOffset = () => {
-      // Generate small random values for translate only (no rotation)
-      const translateX = (Math.random() * 10 - 5) + 'px'; // -5px to 5px
-      const translateY = (Math.random() * 10 - 5) + 'px'; // -5px to 5px
-
-      return {
-        transform: `translate(${translateX}, ${translateY})`,
-        zIndex: Math.floor(Math.random() * 10) // Random z-index for layering effect
-      };
-    };
-
     onMounted(async () => {
       // Only initialize PhotoSwipe if initPhotoSwipe prop is true
       if (props.initPhotoSwipe) {
@@ -76,7 +62,6 @@ export default {
 
     return {
       publicPath,
-      getRandomOffset
     };
   }
 }
