@@ -29,7 +29,7 @@ export default {
 
     // Define sections for the side menu
     const sections = [
-      { id: 'festhoche', title: 'Le Fest\'Hoche #3' },
+      { id: 'festhoche', title: 'L\'ambiance' },
       { id: 'maevol', title: 'Maevol' },
       { id: 'elye', title: 'Elye & The Hydra' },
       { id: 'marta', title: 'Marta' }

@@ -107,8 +107,8 @@ async function processAllImages(options = {}) {
     config
   );
 
-  // Compress Fest'Hoche #3 ambiance images
-  console.log('\nCompressing Fest\'Hoche #3 ambiance images...');
+  // Compress ambiance images
+  console.log('\nCompressing ambiance images...');
   await compressImages(
     path.join(__dirname, '..', 'public', 'gallery', 'festhoche3'),
     path.join(__dirname, '..', 'public', 'gallery', 'festhoche3-compressed'),

@@ -1,9 +1,9 @@
 <template>
   <div class="gallery-container" id="gallery-container">
-    <!-- Fest'Hoche #3 Ambiance Section -->
+    <!-- Ambiance Section -->
     <GallerySection 
       v-if="festhochePhotos.length > 0"
-      title="Le Fest'Hoche #3"
+      title="L'ambiance"
       sectionId="festhoche"
       photoDirectory="gallery/festhoche3-compressed"
       :photos="festhochePhotos"
@@ -93,7 +93,7 @@ export default {
       { src: 'gallery/marta-compressed/DSC05969.jpg', width: 1620, height: 1080, alt: 'Légende 22', author: alicja }
     ];
 
-    // Photos for the Fest'Hoche #3 ambiance section
+    // Photos for the ambiance section
     // Organized in patterns to create a visually pleasing layout
     const festhochePhotos = [
       { src: 'gallery/festhoche3-compressed/DSC06053.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },

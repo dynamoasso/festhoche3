@@ -1,6 +1,6 @@
-# Galerie photos du Fest'Hoche #3
+# Galerie photos
 
-Ce projet est une galerie de photos pour le Fest'Hoche #3, développée avec Vue.js.
+Ce projet est une galerie de photos développée avec Vue.js.
 
 ## Installation
 
@@ -186,7 +186,7 @@ Si vous renommez le dépôt ou déployez sur un autre domaine, vous devrez ajust
 
 La galerie est maintenant organisée en quatre sections distinctes :
 
-1. **Le Fest'Hoche #3** - Photos d'ambiance et de décoration
+1. **L'ambiance** - Photos d'ambiance et de décoration
 2. **Concert de Marta** - Photos du groupe Marta durant la soirée concert
 3. **Maevol** - Photos du groupe Maevol
 4. **Elye** - Photos du groupe Elye
@@ -210,7 +210,7 @@ public/
 
 > **Note importante :** Les dossiers `maevol-compressed` et `elye-compressed` doivent être créés et les images doivent être compressées avant de déployer le site. Voir la section "Compression des images" ci-dessous.
 
-### Comment ajouter des photos à la section "Le Fest'Hoche #3"
+### Comment ajouter des photos à la section "L'ambiance"
 
 1. Placez vos photos originales dans le dossier `public/gallery/festhoche3/`
 2. Compressez vos photos en utilisant le script de compression (voir ci-dessous)
@@ -231,15 +231,15 @@ Pour chaque photo, vous devez spécifier :
 - `height` : la hauteur de la photo en pixels
 - `alt` : une description de la photo (pour l'accessibilité)
 
-### Compression des images pour la section "Le Fest'Hoche #3"
+### Compression des images pour la section "L'ambiance"
 
-Pour compresser les images de la section "Le Fest'Hoche #3", vous pouvez utiliser le même script de compression que pour les images de Marta, mais en modifiant les chemins source et destination :
+Pour compresser les images de la section "L'ambiance", vous pouvez utiliser le même script de compression que pour les images de Marta, mais en modifiant les chemins source et destination :
 
-1. Modifiez le fichier `scripts/compress-images.js` pour ajouter la compression des images de la section "Le Fest'Hoche #3" :
+1. Modifiez le fichier `scripts/compress-images.js` pour ajouter la compression des images de la section "L'ambiance" :
 
 ```javascript
 // Ajouter après la compression des images de Marta
-console.log('Compressing Fest\'Hoche #3 images...');
+console.log('Compressing ambiance images...');
 await compressImages(
   'public/gallery/festhoche3',
   'public/gallery/festhoche3-compressed',
@@ -259,7 +259,7 @@ Pour compresser les images des sections "Maevol" et "Elye", suivez ces étapes :
 1. Modifiez le fichier `scripts/compress-images.js` pour ajouter la compression des images de ces sections :
 
 ```javascript
-// Ajouter après la compression des images de Fest'Hoche #3
+// Ajouter après la compression des images d'ambiance
 console.log('Compressing Maevol images...');
 await compressImages(
   'public/gallery/maevol',
