@@ -12,6 +12,7 @@
         :class="['photo-container', photo.width > photo.height ? 'horizontal' : 'vertical']"
       >
         <img :src="`${publicPath}${photo.src}`" :alt="photo.alt" />
+        <span class="photo-number">{{ index + 1 }}</span>
       </a>
     </div>
   </div>
@@ -116,6 +117,24 @@ export default {
 
 .gallery a:hover img {
   transform: scale(1.05);
+}
+
+.photo-number {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+}
+
+.gallery a:hover .photo-number {
+  opacity: 1;
 }
 
 .photo-container {
