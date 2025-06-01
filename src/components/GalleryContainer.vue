@@ -215,34 +215,34 @@ export default {
     // Photos for the Elye section
     const elyePhotos = [
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/elye-compressed/DSC05848.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
+      { src: 'gallery/elye-compressed/DSC05848.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
       { src: 'gallery/elye-compressed/DSC05849.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
       { src: 'gallery/elye-compressed/DSC05850.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
 
       // Pattern: 1 vertical, 2 horizontal
       { src: 'gallery/elye-compressed/DSC05862.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
-      { src: 'gallery/elye-compressed/DSC05869.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
-      { src: 'gallery/elye-compressed/DSC05877.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
+      { src: 'gallery/elye-compressed/DSC05869.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
+      { src: 'gallery/elye-compressed/DSC05877.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/elye-compressed/DSC05878.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
+      { src: 'gallery/elye-compressed/DSC05878.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
       { src: 'gallery/elye-compressed/DSC05887.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
       { src: 'gallery/elye-compressed/DSC05894.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
 
       // Pattern: 1 vertical, 2 horizontal
       { src: 'gallery/elye-compressed/DSC05897.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
       { src: 'gallery/elye-compressed/DSC05898.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
-      { src: 'gallery/elye-compressed/DSC05900.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
+      { src: 'gallery/elye-compressed/DSC05900.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/elye-compressed/DSC05901.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
-      { src: 'gallery/elye-compressed/DSC05902.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
-      { src: 'gallery/elye-compressed/DSC05910.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
+      { src: 'gallery/elye-compressed/DSC05901.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
+      { src: 'gallery/elye-compressed/DSC05902.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
+      { src: 'gallery/elye-compressed/DSC05910.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/elye-compressed/DSC05913.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja },
+      { src: 'gallery/elye-compressed/DSC05913.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
       { src: 'gallery/elye-compressed/DSC05914.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja },
-      { src: 'gallery/elye-compressed/DSC05916.jpg', width: 1620, height: 1080, alt: 'Elye', author: alicja }
+      { src: 'gallery/elye-compressed/DSC05916.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja }
     ];
 
     return {
