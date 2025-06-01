@@ -8,7 +8,7 @@
       :data-pswp-height="photo.height" 
       target="_blank"
     >
-      <img :src="photo.src" :alt="photo.alt" />
+      <img :src="`${publicPath}${photo.src}`" :alt="photo.alt" />
     </a>
   </div>
 </template>
@@ -19,6 +19,8 @@ import { onMounted } from 'vue';
 export default {
   name: 'PhotoGallery',
   setup() {
+    const publicPath = process.env.BASE_URL || '/';
+
     // Use relative paths without leading slash to work with publicPath in vue.config.js
     const photos = [
       { src: 'gallery/marta/DSC05919.jpg', width: 3205, height: 4208, alt: 'Légende 1' },
@@ -56,6 +58,7 @@ export default {
     });
 
     return {
+      publicPath,
       photos
     };
   }
