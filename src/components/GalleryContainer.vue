@@ -1,0 +1,169 @@
+<template>
+  <div class="gallery-container">
+    <!-- Fest'Hoche #3 Ambiance Section -->
+    <GallerySection 
+      v-if="festhochePhotos.length > 0"
+      title="Le Fest'Hoche #3"
+      sectionId="festhoche"
+      photoDirectory="gallery/festhoche3-compressed"
+      :photos="festhochePhotos"
+    />
+
+    <!-- Marta Concert Section -->
+    <GallerySection 
+      title="Concert de Marta"
+      sectionId="marta"
+      photoDirectory="gallery/marta-compressed"
+      :photos="martaPhotos"
+    />
+  </div>
+</template>
+
+<script>
+import GallerySection from './GallerySection.vue';
+
+export default {
+  name: 'GalleryContainer',
+  components: {
+    GallerySection
+  },
+  setup() {
+    // Photos for the Marta concert section
+    // Using the existing photos from the original PhotoGallery component
+    const martaPhotos = [
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/marta-compressed/DSC05920.jpg', width: 1620, height: 1080, alt: 'Légende 2' },
+      { src: 'gallery/marta-compressed/DSC05923.jpg', width: 1620, height: 1080, alt: 'Légende 5' },
+      { src: 'gallery/marta-compressed/DSC05921.jpg', width: 720, height: 1080, alt: 'Légende 3' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/marta-compressed/DSC05924.jpg', width: 1620, height: 1080, alt: 'Légende 6' },
+      { src: 'gallery/marta-compressed/DSC05927.jpg', width: 1620, height: 1080, alt: 'Légende 7' },
+      { src: 'gallery/marta-compressed/DSC05922.jpg', width: 720, height: 1080, alt: 'Légende 4' },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/marta-compressed/DSC05919.jpg', width: 1080, height: 1418, alt: 'Légende 1' },
+      { src: 'gallery/marta-compressed/DSC05932.jpg', width: 1620, height: 1080, alt: 'Légende 8' },
+      { src: 'gallery/marta-compressed/DSC05933.jpg', width: 1620, height: 1080, alt: 'Légende 9' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/marta-compressed/DSC05937jpg.jpg', width: 1620, height: 1080, alt: 'Légende 10' },
+      { src: 'gallery/marta-compressed/DSC05938.jpg', width: 1620, height: 1080, alt: 'Légende 11' },
+      { src: 'gallery/marta-compressed/DSC05945.jpg', width: 720, height: 1080, alt: 'Légende 14' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/marta-compressed/DSC05940.jpg', width: 1620, height: 1080, alt: 'Légende 12' },
+      { src: 'gallery/marta-compressed/DSC05943.jpg', width: 1620, height: 1080, alt: 'Légende 13' },
+      { src: 'gallery/marta-compressed/DSC05960.jpg', width: 720, height: 1080, alt: 'Légende 18' },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/marta-compressed/DSC05961.jpg', width: 720, height: 1080, alt: 'Légende 19' },
+      { src: 'gallery/marta-compressed/DSC05946.jpg', width: 1620, height: 1080, alt: 'Légende 15' },
+      { src: 'gallery/marta-compressed/DSC05958.jpg', width: 1620, height: 1080, alt: 'Légende 16' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/marta-compressed/DSC05959.jpg', width: 1620, height: 1080, alt: 'Légende 17' },
+      { src: 'gallery/marta-compressed/DSC05968.jpg', width: 1620, height: 1080, alt: 'Légende 21' },
+      { src: 'gallery/marta-compressed/DSC05962.jpg', width: 720, height: 1080, alt: 'Légende 20' },
+
+      // Last horizontal image
+      { src: 'gallery/marta-compressed/DSC05969.jpg', width: 1620, height: 1080, alt: 'Légende 22' }
+    ];
+
+    // Photos for the Fest'Hoche #3 ambiance section
+    // Organized in patterns to create a visually pleasing layout
+    const festhochePhotos = [
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/festhoche3-compressed/DSC05497.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05498.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05514.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/festhoche3-compressed/DSC05499.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05502.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05515.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/festhoche3-compressed/DSC05566.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05511.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05526.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/festhoche3-compressed/DSC05534.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05564.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05567.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/festhoche3-compressed/DSC05570.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05574.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05628.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/festhoche3-compressed/DSC05954.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05579.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05588.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/festhoche3-compressed/DSC05626.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05659.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC06027.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/festhoche3-compressed/DSC05702.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05798.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC06052.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/festhoche3-compressed/DSC06053.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05816.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05839.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/festhoche3-compressed/DSC05845.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05847.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC06054.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/festhoche3-compressed/DSC05856.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05860.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC06066.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/festhoche3-compressed/DSC06067.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05918.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05947.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/festhoche3-compressed/DSC05953.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05955.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC06070.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/festhoche3-compressed/DSC05956.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC05979.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC06082.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/festhoche3-compressed/DSC06145.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC06002.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+      { src: 'gallery/festhoche3-compressed/DSC06144.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' },
+
+      // Last horizontal image
+      { src: 'gallery/festhoche3-compressed/DSC06147.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' }
+    ];
+
+    return {
+      martaPhotos,
+      festhochePhotos
+    };
+  }
+}
+</script>
+
+<style scoped>
+.gallery-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+</style>

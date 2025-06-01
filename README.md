@@ -144,7 +144,7 @@ Pour que les images soient correctement affichées sur GitHub Pages, deux modifi
 publicPath: process.env.NODE_ENV === 'production' ? '/festhoche3/' : '/',
 ```
 
-2. Dans les composants (comme `PhotoGallery.vue`), les chemins d'images doivent être relatifs (sans slash au début) :
+2. Dans les composants (comme `GalleryContainer.vue`), les chemins d'images doivent être relatifs (sans slash au début) :
 
 ```javascript
 // Correct - utilise le publicPath configuré
@@ -159,3 +159,76 @@ Cette configuration assure que :
 - En production sur GitHub Pages, les chemins incluent le nom du dépôt (ex: `/festhoche3/gallery/marta-compressed/image.jpg`)
 
 Si vous renommez le dépôt ou déployez sur un autre domaine, vous devrez ajuster la valeur de `publicPath` en conséquence.
+
+## Sections de la galerie
+
+La galerie est maintenant organisée en deux sections distinctes :
+
+1. **Le Fest'Hoche #3** - Photos d'ambiance et de décoration
+2. **Concert de Marta** - Photos du groupe Marta durant la soirée concert
+
+### Structure des dossiers
+
+Les photos sont organisées dans les dossiers suivants :
+
+```
+public/
+  gallery/
+    festhoche3/             # Dossier pour les photos originales d'ambiance et de décoration
+    festhoche3-compressed/  # Dossier pour les versions compressées des photos d'ambiance
+    marta/                  # Dossier pour les photos originales du concert de Marta
+    marta-compressed/       # Dossier pour les versions compressées des photos du concert
+```
+
+### Comment ajouter des photos à la section "Le Fest'Hoche #3"
+
+1. Placez vos photos originales dans le dossier `public/gallery/festhoche3/`
+2. Compressez vos photos en utilisant le script de compression (voir ci-dessous)
+3. Ouvrez le fichier `src/components/GalleryContainer.vue`
+4. Modifiez le tableau `festhochePhotos` pour inclure vos nouvelles photos :
+
+```javascript
+const festhochePhotos = [
+  { src: 'gallery/festhoche3-compressed/votre-photo-1.jpg', width: 1620, height: 1080, alt: 'Description de la photo' },
+  { src: 'gallery/festhoche3-compressed/votre-photo-2.jpg', width: 720, height: 1080, alt: 'Description de la photo' },
+  // Ajoutez d'autres photos ici
+];
+```
+
+Pour chaque photo, vous devez spécifier :
+- `src` : le chemin vers la photo (relatif au dossier `public`)
+- `width` : la largeur de la photo en pixels
+- `height` : la hauteur de la photo en pixels
+- `alt` : une description de la photo (pour l'accessibilité)
+
+### Compression des images pour la section "Le Fest'Hoche #3"
+
+Pour compresser les images de la section "Le Fest'Hoche #3", vous pouvez utiliser le même script de compression que pour les images de Marta, mais en modifiant les chemins source et destination :
+
+1. Modifiez le fichier `scripts/compress-images.js` pour ajouter la compression des images de la section "Le Fest'Hoche #3" :
+
+```javascript
+// Ajouter après la compression des images de Marta
+console.log('Compressing Fest\'Hoche #3 images...');
+await compressImages(
+  'public/gallery/festhoche3',
+  'public/gallery/festhoche3-compressed',
+  { quality: 80, maxWidth: 1920, maxHeight: 1080 }
+);
+```
+
+2. Exécutez la commande de compression :
+```bash
+npm run compress-images
+```
+
+### Conseils pour organiser les photos
+
+Pour une mise en page optimale, il est recommandé d'alterner entre les photos horizontales et verticales. Voici quelques modèles que vous pouvez suivre :
+
+1. **Modèle 1** : 2 horizontales, 1 verticale
+2. **Modèle 2** : 1 verticale, 2 horizontales
+
+La galerie détecte automatiquement l'orientation des photos en fonction de leurs dimensions :
+- Si `width > height`, la photo est considérée comme horizontale et occupe 2 colonnes
+- Si `width <= height`, la photo est considérée comme verticale et occupe 1 colonne mais 2 rangées

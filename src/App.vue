@@ -4,18 +4,18 @@
       <h1>Galerie photos du Fest'Hoche #3</h1>
     </header>
     <main>
-      <PhotoGallery />
+      <GalleryContainer />
     </main>
   </div>
 </template>
 
 <script>
-import PhotoGallery from './components/PhotoGallery.vue'
+import GalleryContainer from './components/GalleryContainer.vue'
 
 export default {
   name: 'App',
   components: {
-    PhotoGallery
+    GalleryContainer
   }
 }
 </script>
