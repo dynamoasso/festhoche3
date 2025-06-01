@@ -13,6 +13,7 @@
       >
         <img :src="`${publicPath}${photo.src}`" :alt="photo.alt" />
         <span class="photo-number">{{ index + 1 }}</span>
+        <span class="photo-author">{{ photo.author }}</span>
       </a>
     </div>
   </div>
@@ -133,8 +134,23 @@ export default {
   z-index: 10;
 }
 
-.gallery a:hover .photo-number {
+.gallery a:hover .photo-number,
+.gallery a:hover .photo-author {
   opacity: 1;
+}
+
+.photo-author {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
 }
 
 .photo-container {
