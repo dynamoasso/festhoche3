@@ -127,6 +127,28 @@ Vous pouvez modifier les paramètres de compression en éditant le fichier `scri
 - `maxWidth` : Largeur maximale des images, valeur par défaut : 1920
 - `maxHeight` : Hauteur maximale des images, valeur par défaut : 1080
 
+#### Suppression des images originales
+
+Pour économiser de l'espace dans votre dépôt Git, vous pouvez supprimer les images originales après la compression. Cette option est particulièrement utile si vous avez un grand nombre d'images haute résolution qui prennent beaucoup d'espace.
+
+Pour supprimer les images originales après la compression, utilisez l'option `--delete-originals` :
+
+```bash
+npm run compress-images -- --delete-originals
+```
+
+**Attention :** Cette action est irréversible. Assurez-vous d'avoir une sauvegarde des images originales si vous pourriez en avoir besoin ultérieurement. Le script affichera un avertissement et attendra 3 secondes avant de commencer, vous donnant la possibilité d'annuler l'opération.
+
+**Avantages de la suppression des originaux :**
+- Réduction significative de la taille du dépôt Git
+- Moins d'espace disque utilisé
+- Clonage et téléchargement du dépôt plus rapides
+
+**Quand conserver les originaux :**
+- Si vous pourriez avoir besoin de recompresser les images avec des paramètres différents
+- Si vous avez besoin des images originales pour d'autres usages (impression, édition, etc.)
+- Si vous souhaitez conserver les métadonnées des images originales
+
 #### Avantages de la compression d'images
 
 - Chargement plus rapide de la page
