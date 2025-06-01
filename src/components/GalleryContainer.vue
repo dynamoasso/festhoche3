@@ -105,7 +105,6 @@ export default {
       { src: 'gallery/festhoche3-compressed/DSC05574.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
 
       // Pattern: 2 horizontal
-      { src: 'gallery/festhoche3-compressed/DSC05579.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
       { src: 'gallery/festhoche3-compressed/DSC05588.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
 
       // Pattern: 2 horizontal, 1 vertical
@@ -143,7 +142,6 @@ export default {
       { src: 'gallery/festhoche3-compressed/DSC06082.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/festhoche3-compressed/DSC06145.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
       { src: 'gallery/festhoche3-compressed/DSC06002.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
       { src: 'gallery/festhoche3-compressed/DSC06144.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
 
