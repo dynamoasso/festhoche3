@@ -95,22 +95,26 @@ export default {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: auto;
-  gap: 15px;
-  padding: 20px;
+  gap: 8px;
+  padding: 0;
   max-width: 1200px;
   margin: 0 auto;
+  background-color: transparent;
 }
 
 .gallery a {
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
   transition: all 0.3s ease;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  border: 2px solid transparent;
 }
 
 .gallery a:hover {
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-  transform: translateY(-3px);
+  border: 2px solid #fff;
+  transform: scale(1.02);
 }
 
 .gallery a img {
@@ -119,11 +123,10 @@ export default {
   object-fit: cover;
   display: block;
   transition: transform 0.5s ease;
-  border-radius: 8px;
 }
 
 .gallery a:hover img {
-  transform: scale(1.05);
+  /* Remove the transform scale effect to avoid conflicts with the container transform */
 }
 
 .photo-container {
