@@ -7,7 +7,9 @@
     "start": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "deploy": "npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist --add",
+    "deploy:token": "npm run build && gh-pages -d dist --add -r https://$GH_TOKEN@github.com/dynamoasso/festhoche3.git",
+    "clean:gh-pages": "gh-pages-clean"
   },
   "dependencies": {
     "core-js": "^3.8.3",
