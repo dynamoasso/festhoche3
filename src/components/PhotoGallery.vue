@@ -7,8 +7,10 @@
       :data-pswp-width="photo.width" 
       :data-pswp-height="photo.height" 
       target="_blank"
+      class="photo-container"
     >
       <img :src="`${publicPath}${photo.src}`" :alt="photo.alt" />
+<!--      <div class="photo-caption">{{ getFilename(photo.src) }}</div>-->
     </a>
   </div>
 </template>
@@ -20,6 +22,11 @@ export default {
   name: 'PhotoGallery',
   setup() {
     const publicPath = process.env.BASE_URL || '/';
+
+    // Function to extract filename from path
+    const getFilename = (path) => {
+      return path.split('/').pop();
+    };
 
     // Use relative paths without leading slash to work with publicPath in vue.config.js
     // Using compressed images for better performance
@@ -37,13 +44,13 @@ export default {
       { src: 'gallery/marta-compressed/DSC05938.jpg', width: 1620, height: 1080, alt: 'Légende 11' },
       { src: 'gallery/marta-compressed/DSC05940.jpg', width: 1620, height: 1080, alt: 'Légende 12' },
       { src: 'gallery/marta-compressed/DSC05943.jpg', width: 1620, height: 1080, alt: 'Légende 13' },
-      { src: 'gallery/marta-compressed/DSC05945.jpg', width: 1620, height: 1080, alt: 'Légende 14' },
+      { src: 'gallery/marta-compressed/DSC05945.jpg', width: 720, height: 1080, alt: 'Légende 14' },
       { src: 'gallery/marta-compressed/DSC05946.jpg', width: 1620, height: 1080, alt: 'Légende 15' },
       { src: 'gallery/marta-compressed/DSC05958.jpg', width: 1620, height: 1080, alt: 'Légende 16' },
       { src: 'gallery/marta-compressed/DSC05959.jpg', width: 1620, height: 1080, alt: 'Légende 17' },
-      { src: 'gallery/marta-compressed/DSC05960.jpg', width: 1620, height: 1080, alt: 'Légende 18' },
-      { src: 'gallery/marta-compressed/DSC05961.jpg', width: 1620, height: 1080, alt: 'Légende 19' },
-      { src: 'gallery/marta-compressed/DSC05962.jpg', width: 1620, height: 1080, alt: 'Légende 20' },
+      { src: 'gallery/marta-compressed/DSC05960.jpg', width: 720, height: 1080, alt: 'Légende 18' },
+      { src: 'gallery/marta-compressed/DSC05961.jpg', width: 720, height: 1080, alt: 'Légende 19' },
+      { src: 'gallery/marta-compressed/DSC05962.jpg', width: 720, height: 1080, alt: 'Légende 20' },
       { src: 'gallery/marta-compressed/DSC05968.jpg', width: 1620, height: 1080, alt: 'Légende 21' },
       { src: 'gallery/marta-compressed/DSC05969.jpg', width: 1620, height: 1080, alt: 'Légende 22' }
     ];
@@ -60,7 +67,8 @@ export default {
 
     return {
       publicPath,
-      photos
+      photos,
+      getFilename
     };
   }
 }
@@ -96,5 +104,21 @@ export default {
 
 .gallery a:hover img {
   transform: scale(1.05);
+}
+
+.photo-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.photo-caption {
+  text-align: center;
+  padding: 8px 5px;
+  font-size: 0.9rem;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 0 0 8px 8px;
+  margin-top: -5px;
 }
 </style>
