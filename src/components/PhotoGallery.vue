@@ -19,29 +19,30 @@ import { onMounted } from 'vue';
 export default {
   name: 'PhotoGallery',
   setup() {
+    // Use relative paths without leading slash to work with publicPath in vue.config.js
     const photos = [
-      { src: '/gallery/marta/DSC05919.jpg', width: 3205, height: 4208, alt: 'Légende 1' },
-      { src: '/gallery/marta/DSC05920.jpg', width: 5145, height: 3430, alt: 'Légende 2' },
-      { src: '/gallery/marta/DSC05921.jpg', width: 3353, height: 5029, alt: 'Légende 3' },
-      { src: '/gallery/marta/DSC05922.jpg', width: 3880, height: 5820, alt: 'Légende 4' },
-      { src: '/gallery/marta/DSC05923.jpg', width: 4684, height: 3123, alt: 'Légende 5' },
-      { src: '/gallery/marta/DSC05924.jpg', width: 1200, height: 800, alt: 'Légende 6' },
-      { src: '/gallery/marta/DSC05927.jpg', width: 1200, height: 800, alt: 'Légende 7' },
-      { src: '/gallery/marta/DSC05932.jpg', width: 1200, height: 800, alt: 'Légende 8' },
-      { src: '/gallery/marta/DSC05933.jpg', width: 1200, height: 800, alt: 'Légende 9' },
-      { src: '/gallery/marta/DSC05937jpg.jpg', width: 1200, height: 800, alt: 'Légende 10' },
-      { src: '/gallery/marta/DSC05938.jpg', width: 1200, height: 800, alt: 'Légende 11' },
-      { src: '/gallery/marta/DSC05940.jpg', width: 1200, height: 800, alt: 'Légende 12' },
-      { src: '/gallery/marta/DSC05943.jpg', width: 1200, height: 800, alt: 'Légende 13' },
-      { src: '/gallery/marta/DSC05945.jpg', width: 1200, height: 800, alt: 'Légende 14' },
-      { src: '/gallery/marta/DSC05946.jpg', width: 1200, height: 800, alt: 'Légende 15' },
-      { src: '/gallery/marta/DSC05958.jpg', width: 1200, height: 800, alt: 'Légende 16' },
-      { src: '/gallery/marta/DSC05959.jpg', width: 1200, height: 800, alt: 'Légende 17' },
-      { src: '/gallery/marta/DSC05960.jpg', width: 1200, height: 800, alt: 'Légende 18' },
-      { src: '/gallery/marta/DSC05961.jpg', width: 1200, height: 800, alt: 'Légende 19' },
-      { src: '/gallery/marta/DSC05962.jpg', width: 1200, height: 800, alt: 'Légende 20' },
-      { src: '/gallery/marta/DSC05968.jpg', width: 1200, height: 800, alt: 'Légende 21' },
-      { src: '/gallery/marta/DSC05969.jpg', width: 1200, height: 800, alt: 'Légende 22' }
+      { src: 'gallery/marta/DSC05919.jpg', width: 3205, height: 4208, alt: 'Légende 1' },
+      { src: 'gallery/marta/DSC05920.jpg', width: 5145, height: 3430, alt: 'Légende 2' },
+      { src: 'gallery/marta/DSC05921.jpg', width: 3353, height: 5029, alt: 'Légende 3' },
+      { src: 'gallery/marta/DSC05922.jpg', width: 3880, height: 5820, alt: 'Légende 4' },
+      { src: 'gallery/marta/DSC05923.jpg', width: 4684, height: 3123, alt: 'Légende 5' },
+      { src: 'gallery/marta/DSC05924.jpg', width: 1200, height: 800, alt: 'Légende 6' },
+      { src: 'gallery/marta/DSC05927.jpg', width: 1200, height: 800, alt: 'Légende 7' },
+      { src: 'gallery/marta/DSC05932.jpg', width: 1200, height: 800, alt: 'Légende 8' },
+      { src: 'gallery/marta/DSC05933.jpg', width: 1200, height: 800, alt: 'Légende 9' },
+      { src: 'gallery/marta/DSC05937jpg.jpg', width: 1200, height: 800, alt: 'Légende 10' },
+      { src: 'gallery/marta/DSC05938.jpg', width: 1200, height: 800, alt: 'Légende 11' },
+      { src: 'gallery/marta/DSC05940.jpg', width: 1200, height: 800, alt: 'Légende 12' },
+      { src: 'gallery/marta/DSC05943.jpg', width: 1200, height: 800, alt: 'Légende 13' },
+      { src: 'gallery/marta/DSC05945.jpg', width: 1200, height: 800, alt: 'Légende 14' },
+      { src: 'gallery/marta/DSC05946.jpg', width: 1200, height: 800, alt: 'Légende 15' },
+      { src: 'gallery/marta/DSC05958.jpg', width: 1200, height: 800, alt: 'Légende 16' },
+      { src: 'gallery/marta/DSC05959.jpg', width: 1200, height: 800, alt: 'Légende 17' },
+      { src: 'gallery/marta/DSC05960.jpg', width: 1200, height: 800, alt: 'Légende 18' },
+      { src: 'gallery/marta/DSC05961.jpg', width: 1200, height: 800, alt: 'Légende 19' },
+      { src: 'gallery/marta/DSC05962.jpg', width: 1200, height: 800, alt: 'Légende 20' },
+      { src: 'gallery/marta/DSC05968.jpg', width: 1200, height: 800, alt: 'Légende 21' },
+      { src: 'gallery/marta/DSC05969.jpg', width: 1200, height: 800, alt: 'Légende 22' }
     ];
 
     onMounted(async () => {
