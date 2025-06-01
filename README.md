@@ -112,7 +112,7 @@ Les images originales ont été compressées pour améliorer les performances du
 
 Si vous souhaitez ajouter de nouvelles images ou recompresser les images existantes :
 
-1. Placez les images originales dans le dossier `public/gallery/marta`
+1. Placez les images originales dans le dossier `public/gallery`
 2. Exécutez la commande de compression :
    ```bash
    npm run compress-images
@@ -162,10 +162,12 @@ Si vous renommez le dépôt ou déployez sur un autre domaine, vous devrez ajust
 
 ## Sections de la galerie
 
-La galerie est maintenant organisée en deux sections distinctes :
+La galerie est maintenant organisée en quatre sections distinctes :
 
 1. **Le Fest'Hoche #3** - Photos d'ambiance et de décoration
 2. **Concert de Marta** - Photos du groupe Marta durant la soirée concert
+3. **Maevol** - Photos du groupe Maevol
+4. **Elye** - Photos du groupe Elye
 
 ### Structure des dossiers
 
@@ -178,7 +180,13 @@ public/
     festhoche3-compressed/  # Dossier pour les versions compressées des photos d'ambiance
     marta/                  # Dossier pour les photos originales du concert de Marta
     marta-compressed/       # Dossier pour les versions compressées des photos du concert
+    maevol/                 # Dossier pour les photos originales du groupe Maevol
+    maevol-compressed/      # Dossier pour les versions compressées des photos de Maevol
+    elye/                   # Dossier pour les photos originales du groupe Elye
+    elye-compressed/        # Dossier pour les versions compressées des photos d'Elye
 ```
+
+> **Note importante :** Les dossiers `maevol-compressed` et `elye-compressed` doivent être créés et les images doivent être compressées avant de déployer le site. Voir la section "Compression des images" ci-dessous.
 
 ### Comment ajouter des photos à la section "Le Fest'Hoche #3"
 
@@ -221,6 +229,36 @@ await compressImages(
 ```bash
 npm run compress-images
 ```
+
+### Compression des images pour les sections "Maevol" et "Elye"
+
+Pour compresser les images des sections "Maevol" et "Elye", suivez ces étapes :
+
+1. Modifiez le fichier `scripts/compress-images.js` pour ajouter la compression des images de ces sections :
+
+```javascript
+// Ajouter après la compression des images de Fest'Hoche #3
+console.log('Compressing Maevol images...');
+await compressImages(
+  'public/gallery/maevol',
+  'public/gallery/maevol-compressed',
+  { quality: 80, maxWidth: 1920, maxHeight: 1080 }
+);
+
+console.log('Compressing Elye images...');
+await compressImages(
+  'public/gallery/elye',
+  'public/gallery/elye-compressed',
+  { quality: 80, maxWidth: 1920, maxHeight: 1080 }
+);
+```
+
+2. Exécutez la commande de compression :
+```bash
+npm run compress-images
+```
+
+3. Vérifiez que les dossiers `public/gallery/maevol-compressed` et `public/gallery/elye-compressed` ont été créés et contiennent les versions compressées des images.
 
 ### Conseils pour organiser les photos
 

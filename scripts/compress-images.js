@@ -96,6 +96,20 @@ async function processAllImages() {
     path.join(__dirname, '..', 'public', 'gallery', 'festhoche3'),
     path.join(__dirname, '..', 'public', 'gallery', 'festhoche3-compressed')
   );
+
+  // Compress Maevol images
+  console.log('\nCompressing Maevol images...');
+  await compressImages(
+    path.join(__dirname, '..', 'public', 'gallery', 'maevol'),
+    path.join(__dirname, '..', 'public', 'gallery', 'maevol-compressed')
+  );
+
+  // Compress Elye images
+  console.log('\nCompressing Elye images...');
+  await compressImages(
+    path.join(__dirname, '..', 'public', 'gallery', 'elye'),
+    path.join(__dirname, '..', 'public', 'gallery', 'elye-compressed')
+  );
 }
 
 // Helper function to format bytes
