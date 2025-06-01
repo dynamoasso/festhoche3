@@ -162,7 +162,9 @@ export default {
         wheelToZoom: true, // Enable zooming with mouse wheel
         initialZoomLevel: 'fit', // Fit image in the viewport
         secondaryZoomLevel: 2, // Zoom level when double-clicked
-        maxZoomLevel: 4 // Maximum zoom level
+        maxZoomLevel: 4, // Maximum zoom level
+        bgOpacity: 1, // Fully opaque background to hide photos behind
+        backgroundColor: '#000000' // Black background
       });
 
       // Initialize PhotoSwipe
