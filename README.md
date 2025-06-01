@@ -103,3 +103,17 @@ Si vous préférez configurer manuellement le déploiement :
 ## Personnalisation
 
 Vous pouvez personnaliser la configuration en modifiant le fichier `vue.config.js`.
+
+### Configuration des chemins d'images pour GitHub Pages
+
+Pour que les images soient correctement affichées sur GitHub Pages, le fichier `vue.config.js` a été configuré avec :
+
+```javascript
+publicPath: process.env.NODE_ENV === 'production' ? '/festhoche3/' : '/',
+```
+
+Cette configuration assure que :
+- En développement local, les chemins commencent par `/` (ex: `/gallery/marta/image.jpg`)
+- En production sur GitHub Pages, les chemins commencent par `/festhoche3/` (ex: `/festhoche3/gallery/marta/image.jpg`)
+
+Si vous renommez le dépôt ou déployez sur un autre domaine, vous devrez ajuster cette valeur en conséquence.
