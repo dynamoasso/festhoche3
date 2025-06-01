@@ -13,6 +13,7 @@
         :style="getRandomOffset()"
       >
         <img :src="`${publicPath}${photo.src}`" :alt="photo.alt" />
+        <p>{{photo.src}}</p>
       </a>
     </div>
   </div>
