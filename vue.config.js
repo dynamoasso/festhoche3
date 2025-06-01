@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: process.env.NODE_ENV === 'production' ? './' : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/festhoche3/' : '/',
   outputDir: 'dist',
   assetsDir: '',
   indexPath: 'index.html',
