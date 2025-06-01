@@ -10,30 +10,30 @@
       :initPhotoSwipe="false"
     />
 
-    <!-- Marta Concert Section -->
-    <GallerySection 
-      title="Concert de Marta"
-      sectionId="marta"
-      photoDirectory="gallery/marta-compressed"
-      :photos="martaPhotos"
-      :initPhotoSwipe="false"
-    />
-
     <!-- Maevol Section -->
-    <GallerySection 
-      title="Maevol"
-      sectionId="maevol"
-      photoDirectory="gallery/maevol-compressed"
-      :photos="maevolPhotos"
-      :initPhotoSwipe="false"
+    <GallerySection
+        title="Maevol"
+        sectionId="maevol"
+        photoDirectory="gallery/maevol-compressed"
+        :photos="maevolPhotos"
+        :initPhotoSwipe="false"
     />
 
     <!-- Elye Section -->
+    <GallerySection
+        title="Elye & The Hydra"
+        sectionId="elye"
+        photoDirectory="gallery/elye-compressed"
+        :photos="elyePhotos"
+        :initPhotoSwipe="false"
+    />
+
+    <!-- Marta Concert Section -->
     <GallerySection 
-      title="Elye"
-      sectionId="elye"
-      photoDirectory="gallery/elye-compressed"
-      :photos="elyePhotos"
+      title="Marta"
+      sectionId="marta"
+      photoDirectory="gallery/marta-compressed"
+      :photos="martaPhotos"
       :initPhotoSwipe="false"
     />
   </div>
@@ -192,32 +192,24 @@ export default {
     // Photos for the Maevol section
     const maevolPhotos = [
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/maevol-compressed/DSC05790.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja },
-      { src: 'gallery/maevol-compressed/DSC05796.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja },
-      { src: 'gallery/maevol-compressed/DSC05804.jpg', width: 720, height: 1080, alt: 'Maevol', author: alicja },
+      { src: 'gallery/maevol-compressed/DSC05790.jpg', width: 720, height: 1080, alt: 'Maevol', author: alicja },
+      { src: 'gallery/maevol-compressed/DSC05796.jpg', width: 720, height: 1080, alt: 'Maevol', author: alicja },
+      { src: 'gallery/maevol-compressed/DSC05804.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja },
 
       // Pattern: 1 vertical, 2 horizontal
       { src: 'gallery/maevol-compressed/DSC05805.jpg', width: 720, height: 1080, alt: 'Maevol', author: alicja },
       { src: 'gallery/maevol-compressed/DSC05812.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja },
-      { src: 'gallery/maevol-compressed/DSC05815.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja },
+      { src: 'gallery/maevol-compressed/DSC05815.jpg', width: 720, height: 1080, alt: 'Maevol', author: alicja },
 
       // Pattern: 2 horizontal, 1 vertical
       { src: 'gallery/maevol-compressed/DSC05819.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja },
-      { src: 'gallery/maevol-compressed/DSC05825.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja },
-      { src: 'gallery/maevol-compressed/DSC05829.jpg', width: 720, height: 1080, alt: 'Maevol', author: alicja },
+      { src: 'gallery/maevol-compressed/DSC05829.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/maevol-compressed/DSC05831.jpg', width: 720, height: 1080, alt: 'Maevol', author: alicja },
-      { src: 'gallery/maevol-compressed/DSC05832.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja },
       { src: 'gallery/maevol-compressed/DSC05835.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja },
 
-      // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/maevol-compressed/DSC05841.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja },
-      { src: 'gallery/maevol-compressed/DSC05842.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja },
-      { src: 'gallery/maevol-compressed/DSC05843.jpg', width: 720, height: 1080, alt: 'Maevol', author: alicja },
-
       // Last horizontal image
-      { src: 'gallery/maevol-compressed/DSC05844.jpg', width: 1620, height: 1080, alt: 'Maevol', author: alicja }
+      { src: 'gallery/maevol-compressed/DSC05844.jpg', width: 720, height: 1080, alt: 'Maevol', author: alicja }
     ];
 
     // Photos for the Elye section

@@ -12,7 +12,7 @@
         :class="['photo-container', photo.width > photo.height ? 'horizontal' : 'vertical']"
       >
         <img :src="`${publicPath}${photo.src}`" :alt="photo.alt" />
-<!--        <span class="photo-number">{{ index + 1 }}</span>-->
+        <span class="photo-number">{{ index + 1 }}</span>
         <span class="photo-author">{{ photo.author }}</span>
       </a>
     </div>
