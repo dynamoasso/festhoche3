@@ -185,6 +185,8 @@ export default {
   .vertical {
     grid-column: span 1;
   }
+
+  /* In 2-column grid, horizontal images already span the full width, so no special centering needed */
 }
 
 @media (max-width: 480px) {
