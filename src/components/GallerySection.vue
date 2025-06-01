@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery-section">
+  <div class="gallery-section" :id="sectionId">
     <h2 class="section-title">{{ title }}</h2>
     <div class="gallery" id="gallery-{{ sectionId }}" ref="gallery">
       <a 

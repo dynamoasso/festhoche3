@@ -6,23 +6,34 @@
     <main>
       <GalleryContainer />
     </main>
+    <SideMenu :sections="sections" />
   </div>
 </template>
 
 <script>
 import GalleryContainer from './components/GalleryContainer.vue'
+import SideMenu from './components/SideMenu.vue'
 import { onMounted, onUnmounted, ref } from 'vue'
 
 export default {
   name: 'App',
   components: {
-    GalleryContainer
+    GalleryContainer,
+    SideMenu
   },
   setup() {
     // Background color state that will change as user scrolls
     // Starting with a very light gray (#e0e0e0) at the top
     // Ending with a darker gray (#2c2c2c) at the bottom
     const backgroundColor = ref('#e0e0e0');
+
+    // Define sections for the side menu
+    const sections = [
+      { id: 'festhoche', title: 'Le Fest\'Hoche #3' },
+      { id: 'maevol', title: 'Maevol' },
+      { id: 'elye', title: 'Elye & The Hydra' },
+      { id: 'marta', title: 'Marta' }
+    ];
 
     // Function to handle scroll event - simplified version
     const handleScroll = () => {
@@ -60,7 +71,8 @@ export default {
     });
 
     return {
-      backgroundColor
+      backgroundColor,
+      sections
     };
   }
 }
