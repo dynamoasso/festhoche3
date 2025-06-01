@@ -25,7 +25,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: Arial, sans-serif;
-  background: #121212;
+  background: #2c2c2c;
   min-height: 100vh;
 }
 
@@ -33,7 +33,7 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #121212;
+  background-color: #2c2c2c;
   border-radius: 0;
 }
 
