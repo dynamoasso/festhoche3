@@ -1,5 +1,5 @@
 <template>
-  <div class="gallery-container">
+  <div class="gallery-container" id="gallery-container">
     <!-- Fest'Hoche #3 Ambiance Section -->
     <GallerySection 
       v-if="festhochePhotos.length > 0"
@@ -7,6 +7,7 @@
       sectionId="festhoche"
       photoDirectory="gallery/festhoche3-compressed"
       :photos="festhochePhotos"
+      :initPhotoSwipe="false"
     />
 
     <!-- Marta Concert Section -->
@@ -15,12 +16,14 @@
       sectionId="marta"
       photoDirectory="gallery/marta-compressed"
       :photos="martaPhotos"
+      :initPhotoSwipe="false"
     />
   </div>
 </template>
 
 <script>
 import GallerySection from './GallerySection.vue';
+import { onMounted } from 'vue';
 
 export default {
   name: 'GalleryContainer',
@@ -28,6 +31,7 @@ export default {
     GallerySection
   },
   setup() {
+    const publicPath = process.env.BASE_URL || '/';
     // Photos for the Marta concert section
     // Using the existing photos from the original PhotoGallery component
     const martaPhotos = [
@@ -152,7 +156,30 @@ export default {
       { src: 'gallery/festhoche3-compressed/DSC06147.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3' }
     ];
 
+    // Initialize PhotoSwipe for all galleries
+    onMounted(async () => {
+      const PhotoSwipeLightbox = (await import('photoswipe/lightbox')).default;
+
+      // Create a single PhotoSwipe instance for all galleries
+      const lightbox = new PhotoSwipeLightbox({
+        gallery: '#gallery-container',
+        children: '.gallery a', // Target only the photo links in the galleries
+        pswpModule: () => import('photoswipe'),
+        loop: true, // Enable looping through photos
+        showHideAnimationType: 'fade', // Use fade animation for showing/hiding
+        closeOnVerticalDrag: true, // Close on vertical drag
+        wheelToZoom: true, // Enable zooming with mouse wheel
+        initialZoomLevel: 'fit', // Fit image in the viewport
+        secondaryZoomLevel: 2, // Zoom level when double-clicked
+        maxZoomLevel: 4 // Maximum zoom level
+      });
+
+      // Initialize PhotoSwipe
+      lightbox.init();
+    });
+
     return {
+      publicPath,
       martaPhotos,
       festhochePhotos
     };

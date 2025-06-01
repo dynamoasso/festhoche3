@@ -3,10 +3,9 @@
     <a 
       v-for="(photo, index) in photos" 
       :key="index"
-      :href="photo.src" 
+      :href="`${publicPath}${photo.src}`" 
       :data-pswp-width="photo.width" 
-      :data-pswp-height="photo.height" 
-      target="_blank"
+      :data-pswp-height="photo.height"
       :class="['photo-container', photo.width > photo.height ? 'horizontal' : 'vertical']"
     >
       <img :src="`${publicPath}${photo.src}`" :alt="photo.alt" />
@@ -126,7 +125,7 @@ export default {
 }
 
 .gallery a:hover img {
-  /* Remove the transform scale effect to avoid conflicts with the container transform */
+  transform: scale(1.05);
 }
 
 .photo-container {

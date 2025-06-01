@@ -4,11 +4,11 @@
     <div class="gallery" id="gallery-{{ sectionId }}" ref="gallery">
       <a 
         v-for="(photo, index) in photos" 
-        :key="index"
-        :href="photo.src" 
+        :key="`${sectionId}-${index}`"
+        :href="`${publicPath}${photo.src}`" 
         :data-pswp-width="photo.width" 
-        :data-pswp-height="photo.height" 
-        target="_blank"
+        :data-pswp-height="photo.height"
+        :data-pswp-index="`${sectionId}-${index}`"
         :class="['photo-container', photo.width > photo.height ? 'horizontal' : 'vertical']"
         :style="getRandomOffset()"
       >
@@ -39,6 +39,10 @@ export default {
     photos: {
       type: Array,
       required: true
+    },
+    initPhotoSwipe: {
+      type: Boolean,
+      default: true
     }
   },
   setup(props) {
@@ -57,13 +61,16 @@ export default {
     };
 
     onMounted(async () => {
-      const PhotoSwipeLightbox = (await import('photoswipe/lightbox')).default;
-      const lightbox = new PhotoSwipeLightbox({
-        gallery: `#gallery-${props.sectionId}`,
-        children: 'a',
-        pswpModule: () => import('photoswipe')
-      });
-      lightbox.init();
+      // Only initialize PhotoSwipe if initPhotoSwipe prop is true
+      if (props.initPhotoSwipe) {
+        const PhotoSwipeLightbox = (await import('photoswipe/lightbox')).default;
+        const lightbox = new PhotoSwipeLightbox({
+          gallery: `#gallery-${props.sectionId}`,
+          children: 'a',
+          pswpModule: () => import('photoswipe')
+        });
+        lightbox.init();
+      }
     });
 
     return {
@@ -122,7 +129,7 @@ export default {
 }
 
 .gallery a:hover img {
-  /* Remove the transform scale effect to avoid conflicts with the container transform */
+  transform: scale(1.05);
 }
 
 .photo-container {
