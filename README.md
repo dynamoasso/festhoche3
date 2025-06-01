@@ -104,6 +104,36 @@ Si vous préférez configurer manuellement le déploiement :
 
 Vous pouvez personnaliser la configuration en modifiant le fichier `vue.config.js`.
 
+### Compression des images
+
+Les images originales ont été compressées pour améliorer les performances du site. La compression a permis de réduire la taille totale des images de 366 Mo à environ 4 Mo (réduction de 99%), tout en maintenant une qualité visuelle acceptable.
+
+#### Comment utiliser le script de compression
+
+Si vous souhaitez ajouter de nouvelles images ou recompresser les images existantes :
+
+1. Placez les images originales dans le dossier `public/gallery/marta`
+2. Exécutez la commande de compression :
+   ```bash
+   npm run compress-images
+   ```
+3. Les images compressées seront générées dans le dossier `public/gallery/marta-compressed`
+
+#### Configuration de la compression
+
+Vous pouvez modifier les paramètres de compression en éditant le fichier `scripts/compress-images.js` :
+
+- `quality` : Qualité JPEG (0-100), valeur par défaut : 80
+- `maxWidth` : Largeur maximale des images, valeur par défaut : 1920
+- `maxHeight` : Hauteur maximale des images, valeur par défaut : 1080
+
+#### Avantages de la compression d'images
+
+- Chargement plus rapide de la page
+- Réduction de la consommation de données pour les utilisateurs
+- Amélioration du référencement (SEO) grâce à de meilleures performances
+- Réduction des coûts d'hébergement et de bande passante
+
 ### Configuration des chemins d'images pour GitHub Pages
 
 Pour que les images soient correctement affichées sur GitHub Pages, deux modifications sont nécessaires :
@@ -118,14 +148,14 @@ publicPath: process.env.NODE_ENV === 'production' ? '/festhoche3/' : '/',
 
 ```javascript
 // Correct - utilise le publicPath configuré
-{ src: 'gallery/marta/image.jpg' }
+{ src: 'gallery/marta-compressed/image.jpg' }
 
 // Incorrect - ignore le publicPath configuré
-{ src: '/gallery/marta/image.jpg' }
+{ src: '/gallery/marta-compressed/image.jpg' }
 ```
 
 Cette configuration assure que :
-- En développement local, les chemins sont correctement résolus (ex: `/gallery/marta/image.jpg`)
-- En production sur GitHub Pages, les chemins incluent le nom du dépôt (ex: `/festhoche3/gallery/marta/image.jpg`)
+- En développement local, les chemins sont correctement résolus (ex: `/gallery/marta-compressed/image.jpg`)
+- En production sur GitHub Pages, les chemins incluent le nom du dépôt (ex: `/festhoche3/gallery/marta-compressed/image.jpg`)
 
 Si vous renommez le dépôt ou déployez sur un autre domaine, vous devrez ajuster la valeur de `publicPath` en conséquence.

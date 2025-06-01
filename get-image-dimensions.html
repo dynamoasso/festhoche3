@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Image Dimensions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+        .hidden {
+            position: absolute;
+            visibility: hidden;
+            width: auto;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Dimensions</h1>
+    <p>This tool will load all images and display their dimensions.</p>
+    <button id="getBtn">Get Dimensions</button>
+    <div id="result"></div>
+    <div id="imageContainer" class="hidden"></div>
+
+    <script>
+        const imageFiles = [
+            'DSC05919.jpg', 'DSC05920.jpg', 'DSC05921.jpg', 'DSC05922.jpg', 'DSC05923.jpg',
+            'DSC05924.jpg', 'DSC05927.jpg', 'DSC05932.jpg', 'DSC05933.jpg', 'DSC05937jpg.jpg',
+            'DSC05938.jpg', 'DSC05940.jpg', 'DSC05943.jpg', 'DSC05945.jpg', 'DSC05946.jpg',
+            'DSC05958.jpg', 'DSC05959.jpg', 'DSC05960.jpg', 'DSC05961.jpg', 'DSC05962.jpg',
+            'DSC05968.jpg', 'DSC05969.jpg'
+        ];
+
+        document.getElementById('getBtn').addEventListener('click', async () => {
+            const resultDiv = document.getElementById('result');
+            const container = document.getElementById('imageContainer');
+            
+            resultDiv.innerHTML = '<p>Loading images and getting dimensions...</p>';
+            
+            const dimensions = [];
+            
+            for (const file of imageFiles) {
+                try {
+                    const dim = await getImageDimensions(`gallery/marta/${file}`);
+                    dimensions.push({
+                        file,
+                        width: dim.width,
+                        height: dim.height
+                    });
+                } catch (error) {
+                    console.error(`Error loading ${file}:`, error);
+                    dimensions.push({
+                        file,
+                        error: error.message
+                    });
+                }
+            }
+            
+            // Generate Vue.js code
+            let vueCode = 'const photos = [\n';
+            dimensions.forEach((img, index) => {
+                const alt = `Légende ${index + 1}`;
+                if (img.error) {
+                    vueCode += `  { src: 'gallery/marta/${img.file}', width: 0, height: 0, alt: '${alt}' }, // Error: ${img.error}\n`;
+                } else {
+                    vueCode += `  { src: 'gallery/marta/${img.file}', width: ${img.width}, height: ${img.height}, alt: '${alt}' },\n`;
+                }
+            });
+            vueCode += '];';
+            
+            // Display results
+            resultDiv.innerHTML = `
+                <h2>Results</h2>
+                <p>Found ${dimensions.length} images.</p>
+                <h3>Vue.js Code:</h3>
+                <pre>${vueCode}</pre>
+            `;
+        });
+
+        function getImageDimensions(src) {
+            return new Promise((resolve, reject) => {
+                const img = new Image();
+                img.onload = () => {
+                    resolve({
+                        width: img.naturalWidth,
+                        height: img.naturalHeight
+                    });
+                };
+                img.onerror = () => {
+                    reject(new Error(`Failed to load image: ${src}`));
+                };
+                img.src = src;
+                document.getElementById('imageContainer').appendChild(img);
+            });
+        }
+    </script>
+</body>
+</html>
