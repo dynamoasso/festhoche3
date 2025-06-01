@@ -70,18 +70,31 @@ export default {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px;
+  gap: 15px;
   padding: 20px;
+}
+
+.gallery a {
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.gallery a:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
 }
 
 .gallery a img {
   width: 100%;
   height: auto;
   display: block;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
+  border-radius: 8px;
 }
 
-.gallery a img:hover {
-  transform: scale(1.03);
+.gallery a:hover img {
+  transform: scale(1.05);
 }
 </style>
