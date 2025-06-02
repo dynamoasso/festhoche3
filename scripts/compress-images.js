@@ -138,6 +138,14 @@ async function processAllImages(options = {}) {
     path.join(__dirname, '..', 'public', 'gallery', 'dvr-compressed'),
     config
   );
+
+  // Compress Danse images
+  console.log('\nCompressing Danse images...');
+  await compressImages(
+    path.join(__dirname, '..', 'public', 'gallery', 'danse'),
+    path.join(__dirname, '..', 'public', 'gallery', 'danse-compressed'),
+    config
+  );
 }
 
 // Helper function to format bytes

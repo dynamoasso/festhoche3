@@ -20,6 +20,16 @@
       :initPhotoSwipe="false"
     />
 
+    <!-- Danse Section -->
+    <GallerySection
+      v-if="dansePhotos.length > 0"
+      title="L'Atelier du Contre Temps"
+      sectionId="danse"
+      photoDirectory="gallery/danse-compressed"
+      :photos="dansePhotos"
+      :initPhotoSwipe="false"
+    />
+
     <!-- Maevol Section -->
     <GallerySection
         title="Maevol"
@@ -292,13 +302,78 @@ export default {
       { src: 'gallery/dvr-compressed/DSC05594.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja }
     ];
 
+    // Photos for the Danse section
+    const dansePhotos = [
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/danse-compressed/DSC05705.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05706.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05707.jpg', width: 720, height: 1080, alt: 'Danse', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/danse-compressed/DSC05708.jpg', width: 720, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05709.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05711.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/danse-compressed/DSC05714.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05717.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05720.jpg', width: 720, height: 1080, alt: 'Danse', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/danse-compressed/DSC05721.jpg', width: 720, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05723.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05724.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/danse-compressed/DSC05725.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05727.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05730.jpg', width: 720, height: 1080, alt: 'Danse', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/danse-compressed/DSC05731.jpg', width: 720, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05733.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05734.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/danse-compressed/DSC05735.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05736.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05738.jpg', width: 720, height: 1080, alt: 'Danse', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/danse-compressed/DSC05739.jpg', width: 720, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05740.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05743.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/danse-compressed/DSC05745.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05748.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05749.jpg', width: 720, height: 1080, alt: 'Danse', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/danse-compressed/DSC05751.jpg', width: 720, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05753.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05755.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/danse-compressed/DSC05760.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05762.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05765.jpg', width: 720, height: 1080, alt: 'Danse', author: alicja },
+
+      // Last horizontal images
+      { src: 'gallery/danse-compressed/DSC05766.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05768.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05770.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja },
+      { src: 'gallery/danse-compressed/DSC05775.jpg', width: 720, height: 1080, alt: 'Danse', author: alicja }
+    ];
+
     return {
       publicPath,
       martaPhotos,
       festhochePhotos,
       maevolPhotos,
       elyePhotos,
-      dvrPhotos
+      dvrPhotos,
+      dansePhotos
     };
   }
 }
