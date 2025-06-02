@@ -71,6 +71,7 @@ export default {
   setup() {
     const publicPath = process.env.BASE_URL || '/';
     const alicja = 'Alicja Pakulska';
+    const johann = 'Johann Aubin';
     // Photos for the Marta concert section
     // Using the existing photos from the original PhotoGallery component
     const martaPhotos = [
@@ -299,7 +300,58 @@ export default {
       { src: 'gallery/alicja/dvr-compressed/DSC05593.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
 
       // Last horizontal image
-      { src: 'gallery/alicja/dvr-compressed/DSC05594.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja }
+      { src: 'gallery/alicja/dvr-compressed/DSC05594.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/dvr-compressed/02.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/03.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/05.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/johann/dvr-compressed/07 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/08 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/09 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/dvr-compressed/10 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/11 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/12 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/johann/dvr-compressed/13 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/14 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/15 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/dvr-compressed/16 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/17 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/18 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/johann/dvr-compressed/19 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/20 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/21 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/dvr-compressed/22 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/23  copie.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/24 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/johann/dvr-compressed/25 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/26 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/27  .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/dvr-compressed/28 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/29.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/30 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+
+      // Last horizontal images
+      { src: 'gallery/johann/dvr-compressed/31 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/32.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/33.JPG', width: 720, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/34.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann }
     ];
 
     // Photos for the Danse section
