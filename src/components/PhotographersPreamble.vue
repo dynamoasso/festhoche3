@@ -31,14 +31,8 @@
           <h3>Johann Aubin</h3>
           <p>Artiste visuel dont l'objectif capture l'émotion et l'énergie des performances live avec un style distinctif.</p>
           <div class="social-links">
-            <a href="https://www.example.com/johann" target="_blank" rel="noopener noreferrer">
-              <span class="social-icon">🌐</span> Site Web
-            </a>
-            <a href="https://www.instagram.com/johann" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/_johann_illustrations_/" target="_blank" rel="noopener noreferrer">
               <span class="social-icon">📸</span> Instagram
-            </a>
-            <a href="https://www.facebook.com/johann" target="_blank" rel="noopener noreferrer">
-              <span class="social-icon">📘</span> Facebook
             </a>
           </div>
         </div>
