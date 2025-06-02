@@ -103,7 +103,7 @@ async function processAllImages(options = {}) {
   console.log('Compressing Marta concert images...');
   await compressImages(
     path.join(__dirname, '..', 'public', 'gallery', 'marta'),
-    path.join(__dirname, '..', 'public', 'gallery', 'marta-compressed'),
+    path.join(__dirname, '..', 'public', 'gallery', 'alicja', 'marta-compressed'),
     config
   );
 
@@ -111,7 +111,7 @@ async function processAllImages(options = {}) {
   console.log('\nCompressing ambiance images...');
   await compressImages(
     path.join(__dirname, '..', 'public', 'gallery', 'festhoche3'),
-    path.join(__dirname, '..', 'public', 'gallery', 'festhoche3-compressed'),
+    path.join(__dirname, '..', 'public', 'gallery', 'alicja', 'festhoche3-compressed'),
     config
   );
 
@@ -119,7 +119,7 @@ async function processAllImages(options = {}) {
   console.log('\nCompressing Maevol images...');
   await compressImages(
     path.join(__dirname, '..', 'public', 'gallery', 'maevol'),
-    path.join(__dirname, '..', 'public', 'gallery', 'maevol-compressed'),
+    path.join(__dirname, '..', 'public', 'gallery', 'alicja', 'maevol-compressed'),
     config
   );
 
@@ -127,7 +127,7 @@ async function processAllImages(options = {}) {
   console.log('\nCompressing Elye images...');
   await compressImages(
     path.join(__dirname, '..', 'public', 'gallery', 'elye'),
-    path.join(__dirname, '..', 'public', 'gallery', 'elye-compressed'),
+    path.join(__dirname, '..', 'public', 'gallery', 'alicja', 'elye-compressed'),
     config
   );
 
@@ -135,7 +135,7 @@ async function processAllImages(options = {}) {
   console.log('\nCompressing DVR images...');
   await compressImages(
     path.join(__dirname, '..', 'public', 'gallery', 'dvr'),
-    path.join(__dirname, '..', 'public', 'gallery', 'dvr-compressed'),
+    path.join(__dirname, '..', 'public', 'gallery', 'alicja', 'dvr-compressed'),
     config
   );
 
@@ -143,7 +143,7 @@ async function processAllImages(options = {}) {
   console.log('\nCompressing Danse images...');
   await compressImages(
     path.join(__dirname, '..', 'public', 'gallery', 'danse'),
-    path.join(__dirname, '..', 'public', 'gallery', 'danse-compressed'),
+    path.join(__dirname, '..', 'public', 'gallery', 'alicja', 'danse-compressed'),
     config
   );
 }
