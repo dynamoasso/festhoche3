@@ -224,5 +224,10 @@ export default {
     grid-column: span 1;
     grid-row: auto;
   }
+
+  /* Add padding at the bottom to ensure last photos are visible above the side menu */
+  .gallery-section:last-child {
+    padding-bottom: 80px; /* Ensure enough space for the side menu */
+  }
 }
 </style>

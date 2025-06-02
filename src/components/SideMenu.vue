@@ -182,24 +182,26 @@ export default {
 
 @media (max-width: 480px) {
   .side-menu {
-    bottom: 20px;
+    bottom: 40px; /* Increased bottom spacing to allow viewing photos below */
     top: auto;
-    right: 50%;
-    transform: translateX(50%);
+    left: 0;
+    right: 0;
+    transform: none;
     padding: 10px;
     max-width: 100%;
     width: 90%;
+    margin: 0 auto;
     animation: fadeInMobile 0.5s ease-out;
   }
 
   @keyframes fadeInMobile {
     from {
       opacity: 0;
-      transform: translateX(50%) translateY(20px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
-      transform: translateX(50%) translateY(0);
+      transform: translateY(0);
     }
   }
 
@@ -215,7 +217,7 @@ export default {
   }
 
   .side-menu li:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
   }
 
   .side-menu a {
