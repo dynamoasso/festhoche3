@@ -10,13 +10,13 @@
           <h3>Alicja Pakulska</h3>
           <p>Photographe passionnée capturant l'essence des moments musicaux et artistiques avec une sensibilité unique.</p>
           <div class="social-links">
-            <a href="https://www.example.com/alicja" target="_blank" rel="noopener noreferrer">
+            <a href="https://alicjapakulska.myportfolio.com/" target="_blank" rel="noopener noreferrer">
               <span class="social-icon">🌐</span> Site Web
             </a>
-            <a href="https://www.instagram.com/alicja" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/li_cya/" target="_blank" rel="noopener noreferrer">
               <span class="social-icon">📸</span> Instagram
             </a>
-            <a href="https://www.facebook.com/alicja" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.facebook.com/alicja.pakulska" target="_blank" rel="noopener noreferrer">
               <span class="social-icon">📘</span> Facebook
             </a>
           </div>
