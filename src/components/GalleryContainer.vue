@@ -255,17 +255,17 @@ export default {
     const dvrPhotos = [
       // Pattern: 2 horizontal, 1 vertical
       { src: 'gallery/dvr-compressed/DSC05493.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
-      { src: 'gallery/dvr-compressed/DSC05494.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05494.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
       { src: 'gallery/dvr-compressed/DSC05503.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/dvr-compressed/DSC05504.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
-      { src: 'gallery/dvr-compressed/DSC05505.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05504.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05505.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
       { src: 'gallery/dvr-compressed/DSC05531.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/dvr-compressed/DSC05535.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
-      { src: 'gallery/dvr-compressed/DSC05538.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05535.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05538.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
       { src: 'gallery/dvr-compressed/DSC05539.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
 
       // Pattern: 2 horizontal, 1 vertical
@@ -279,12 +279,12 @@ export default {
       { src: 'gallery/dvr-compressed/DSC05555.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/dvr-compressed/DSC05557.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05557.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
       { src: 'gallery/dvr-compressed/DSC05558.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
       { src: 'gallery/dvr-compressed/DSC05559.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/dvr-compressed/DSC05560.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05560.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
       { src: 'gallery/dvr-compressed/DSC05562.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
       { src: 'gallery/dvr-compressed/DSC05593.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
 
