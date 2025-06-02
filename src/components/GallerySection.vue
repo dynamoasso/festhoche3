@@ -225,6 +225,24 @@ export default {
     grid-row: auto;
   }
 
+  /* Force single column layout for all sections, especially Marta section */
+  #marta .gallery {
+    grid-template-columns: 1fr !important;
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  #marta .horizontal, #marta .vertical {
+    grid-column: span 1 !important;
+    grid-row: auto !important;
+    width: 100% !important;
+  }
+
+  #marta .gallery a img {
+    width: 100% !important;
+    height: auto !important;
+  }
+
   /* Add padding at the bottom to ensure last photos are visible above the side menu */
   .gallery-section:last-child {
     padding-bottom: 80px; /* Ensure enough space for the side menu */
