@@ -12,7 +12,7 @@
         :class="['photo-container', photo.width > photo.height ? 'horizontal' : 'vertical']"
       >
         <img :src="`${publicPath}${photo.src}`" :alt="photo.alt" />
-        <span class="photo-number">{{ index + 1 }}</span>
+        <span v-if="showNames" class="photo-filename">{{ photo.src.split('/').pop() }}</span>
         <span class="photo-author">{{ photo.author }}</span>
       </a>
     </div>
@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import { onMounted } from 'vue';
+import { onMounted, ref } from 'vue';
 
 export default {
   name: 'GallerySection',
@@ -48,8 +48,13 @@ export default {
   },
   setup(props) {
     const publicPath = process.env.BASE_URL || '/';
+    const showNames = ref(false);
 
     onMounted(async () => {
+      // Check if show-names parameter exists in URL
+      const urlParams = new URLSearchParams(window.location.search);
+      showNames.value = urlParams.has('show-names');
+
       // Only initialize PhotoSwipe if initPhotoSwipe prop is true
       if (props.initPhotoSwipe) {
         const PhotoSwipeLightbox = (await import('photoswipe/lightbox')).default;
@@ -64,6 +69,7 @@ export default {
 
     return {
       publicPath,
+      showNames,
     };
   }
 }
@@ -120,7 +126,7 @@ export default {
   transform: scale(1.05);
 }
 
-.photo-number {
+.photo-filename {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -134,7 +140,7 @@ export default {
   z-index: 10;
 }
 
-.gallery a:hover .photo-number,
+.gallery a:hover .photo-filename,
 .gallery a:hover .photo-author {
   opacity: 1;
 }
