@@ -1,5 +1,8 @@
 <template>
   <div class="gallery-container" id="gallery-container">
+    <!-- Photographers Preamble -->
+    <PhotographersPreamble />
+
     <!-- Ambiance Section -->
     <GallerySection 
       v-if="festhochePhotos.length > 0"
@@ -61,12 +64,14 @@
 
 <script>
 import GallerySection from './GallerySection.vue';
+import PhotographersPreamble from './PhotographersPreamble.vue';
 import { onMounted } from 'vue';
 
 export default {
   name: 'GalleryContainer',
   components: {
-    GallerySection
+    GallerySection,
+    PhotographersPreamble
   },
   setup() {
     const publicPath = process.env.BASE_URL || '/';
