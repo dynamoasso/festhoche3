@@ -36,17 +36,71 @@ export default {
       { id: 'marta', title: 'Marta' }
     ];
 
-    // Function to handle scroll event - simplified version
+    // Function to handle scroll event with section-specific colors
     const handleScroll = () => {
       // Calculate scroll progress (0 to 1) based on how far down the page we've scrolled
       // 0 at the top of the page, 1 when we've scrolled to the bottom
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollProgress = Math.min(1, Math.max(0, window.scrollY / scrollHeight));
 
-      // Interpolate between the starting color (very light gray) and ending color (darker gray)
-      const r = Math.round(interpolate(224, 44, scrollProgress)); // e0 -> 2c
-      const g = Math.round(interpolate(224, 44, scrollProgress)); // e0 -> 2c
-      const b = Math.round(interpolate(224, 44, scrollProgress)); // e0 -> 2c
+      // Get positions of all sections to determine where we are in the page
+      const festhocheSection = document.getElementById('festhoche');
+      const dvrSection = document.getElementById('dvr');
+      const maevolSection = document.getElementById('maevol');
+
+      // Default colors (light gray to dark gray)
+      let r = 0, g = 0, b = 0;
+
+      // Base gray colors that would be used without special sections
+      const baseR = Math.round(interpolate(224, 44, scrollProgress));
+      const baseG = Math.round(interpolate(224, 44, scrollProgress));
+      const baseB = Math.round(interpolate(224, 44, scrollProgress));
+
+      // Warm yellow colors for DVR section
+      const warmR = 224; // Keep red high for warmth
+      const warmG = 192; // Reduce green slightly
+      const warmB = 112; // Reduce blue significantly for yellow
+
+      // Initialize with base gray colors
+      r = baseR;
+      g = baseG;
+      b = baseB;
+
+      if (dvrSection) {
+        const dvrRect = dvrSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Check if DVR section is visible or we're in its vicinity
+        if (dvrRect.top < windowHeight * 1.5 && dvrRect.bottom > -windowHeight * 0.5) {
+          // Calculate how centered the DVR section is in the viewport
+          // 1 when fully centered, 0 when just entering or leaving
+          const visibleHeight = Math.min(dvrRect.bottom, windowHeight) - Math.max(dvrRect.top, 0);
+          let visibilityRatio = Math.min(1, visibleHeight / Math.min(dvrRect.height, windowHeight));
+
+          // Enhance visibility ratio to create a smoother transition
+          // This creates a bell curve effect that peaks when the section is centered
+          if (dvrRect.top <= 0 && dvrRect.bottom >= windowHeight) {
+            // Section fills the viewport - maximum effect
+            visibilityRatio = 1;
+          } else if (dvrRect.top > 0) {
+            // Section is entering from the bottom - gradual increase
+            visibilityRatio = Math.pow(visibilityRatio, 0.7);
+          } else if (dvrRect.bottom < windowHeight) {
+            // Section is leaving from the top - gradual decrease
+            visibilityRatio = Math.pow(visibilityRatio, 0.7);
+          }
+
+          // Apply warm colors based on visibility ratio
+          r = Math.round(interpolate(baseR, warmR, visibilityRatio));
+          g = Math.round(interpolate(baseG, warmG, visibilityRatio));
+          b = Math.round(interpolate(baseB, warmB, visibilityRatio));
+        }
+      } else {
+        // Fallback if DVR section not found
+        r = baseR;
+        g = baseG;
+        b = baseB;
+      }
 
       // Set the new background color
       backgroundColor.value = `rgb(${r}, ${g}, ${b})`;
