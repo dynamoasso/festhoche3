@@ -130,6 +130,14 @@ async function processAllImages(options = {}) {
     path.join(__dirname, '..', 'public', 'gallery', 'elye-compressed'),
     config
   );
+
+  // Compress DVR images
+  console.log('\nCompressing DVR images...');
+  await compressImages(
+    path.join(__dirname, '..', 'public', 'gallery', 'dvr'),
+    path.join(__dirname, '..', 'public', 'gallery', 'dvr-compressed'),
+    config
+  );
 }
 
 // Helper function to format bytes

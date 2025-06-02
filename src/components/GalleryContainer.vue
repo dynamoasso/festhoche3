@@ -10,6 +10,16 @@
       :initPhotoSwipe="false"
     />
 
+    <!-- DVR Section -->
+    <GallerySection
+      v-if="dvrPhotos.length > 0"
+      title="DVR"
+      sectionId="dvr"
+      photoDirectory="gallery/dvr-compressed"
+      :photos="dvrPhotos"
+      :initPhotoSwipe="false"
+    />
+
     <!-- Maevol Section -->
     <GallerySection
         title="Maevol"
@@ -155,7 +165,7 @@ export default {
       { src: 'gallery/festhoche3-compressed/DSC06070.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/festhoche3-compressed/DSC05956.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
+      { src: 'gallery/festhoche3-compressed/DSC05947.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
       { src: 'gallery/festhoche3-compressed/DSC05979.jpg', width: 720, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
       { src: 'gallery/festhoche3-compressed/DSC06082.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
 
@@ -241,12 +251,54 @@ export default {
       { src: 'gallery/elye-compressed/DSC05916.jpg', width: 720, height: 1080, alt: 'Elye', author: alicja }
     ];
 
+    // Photos for the DVR section
+    const dvrPhotos = [
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/dvr-compressed/DSC05493.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05494.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05503.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/dvr-compressed/DSC05504.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05505.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05531.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/dvr-compressed/DSC05535.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05538.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05539.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/dvr-compressed/DSC05541.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05545.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05551.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/dvr-compressed/DSC05552.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05554.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05555.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/dvr-compressed/DSC05557.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05558.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05559.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/dvr-compressed/DSC05560.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05562.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
+      { src: 'gallery/dvr-compressed/DSC05593.jpg', width: 720, height: 1080, alt: 'DVR', author: alicja },
+
+      // Last horizontal image
+      { src: 'gallery/dvr-compressed/DSC05594.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja }
+    ];
+
     return {
       publicPath,
       martaPhotos,
       festhochePhotos,
       maevolPhotos,
-      elyePhotos
+      elyePhotos,
+      dvrPhotos
     };
   }
 }
