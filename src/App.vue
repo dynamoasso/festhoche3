@@ -46,7 +46,8 @@ export default {
       { id: 'danse', title: 'L\'Atelier du Contre Temps' },
       { id: 'maevol', title: 'Maevol' },
       { id: 'elye', title: 'Elye & The Hydra' },
-      { id: 'marta', title: 'Marta' }
+      { id: 'marta', title: 'Marta' },
+      { id: 'banquet', title: 'Le grand banquet' }
     ];
 
     // Function to handle scroll event with section-specific colors
@@ -63,6 +64,7 @@ export default {
       // Get positions of all sections to determine where we are in the page
       const festhocheSection = document.getElementById('festhoche');
       const dvrSection = document.getElementById('dvr');
+      const banquetSection = document.getElementById('banquet');
       const maevolSection = document.getElementById('maevol');
 
       // Default colors (light gray to dark gray)
@@ -83,6 +85,11 @@ export default {
       const pinkG = 49;  // Low green component for pink
       const pinkB = 130; // Medium blue component for pink
 
+      // Green colors for banquet section
+      const greenR = 76;  // Low red component for green
+      const greenG = 175; // High green component for green
+      const greenB = 80;  // Low blue component for green
+
       // Initialize with base gray colors
       r = baseR;
       g = baseG;
@@ -93,6 +100,8 @@ export default {
       let festhocheVisibilityRatio = 0;
       let dvrVisible = false;
       let dvrVisibilityRatio = 0;
+      let banquetVisible = false;
+      let banquetVisibilityRatio = 0;
 
       // Check for ambiance section (festhoche)
       if (festhocheSection) {
@@ -152,9 +161,43 @@ export default {
         }
       }
 
+      // Check for Banquet section (independent of other sections)
+      if (banquetSection) {
+        const banquetRect = banquetSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Check if Banquet section is visible or we're in its vicinity
+        if (banquetRect.top < windowHeight * 1.5 && banquetRect.bottom > -windowHeight * 0.5) {
+          // Calculate how centered the Banquet section is in the viewport
+          // 1 when fully centered, 0 when just entering or leaving
+          const visibleHeight = Math.min(banquetRect.bottom, windowHeight) - Math.max(banquetRect.top, 0);
+          banquetVisibilityRatio = Math.min(1, visibleHeight / Math.min(banquetRect.height, windowHeight));
+
+          // Enhance visibility ratio to create a smoother transition
+          // This creates a bell curve effect that peaks when the section is centered
+          if (banquetRect.top <= 0 && banquetRect.bottom >= windowHeight) {
+            // Section fills the viewport - maximum effect
+            banquetVisibilityRatio = 1;
+          } else if (banquetRect.top > 0) {
+            // Section is entering from the bottom - gradual increase
+            banquetVisibilityRatio = Math.pow(banquetVisibilityRatio, 0.7);
+          } else if (banquetRect.bottom < windowHeight) {
+            // Section is leaving from the top - gradual decrease
+            banquetVisibilityRatio = Math.pow(banquetVisibilityRatio, 0.7);
+          }
+
+          banquetVisible = banquetVisibilityRatio > 0;
+        }
+      }
+
       // Apply colors based on visibility of sections
-      if (festhocheVisible && dvrVisible) {
-        // Both sections are visible, blend colors based on visibility ratios
+      if (banquetVisible) {
+        // Banquet section is visible (takes priority)
+        r = Math.round(interpolate(baseR, greenR, banquetVisibilityRatio));
+        g = Math.round(interpolate(baseG, greenG, banquetVisibilityRatio));
+        b = Math.round(interpolate(baseB, greenB, banquetVisibilityRatio));
+      } else if (festhocheVisible && dvrVisible) {
+        // Both festhoche and dvr sections are visible, blend colors based on visibility ratios
         const totalRatio = festhocheVisibilityRatio + dvrVisibilityRatio;
         const festhocheWeight = festhocheVisibilityRatio / totalRatio;
         const dvrWeight = dvrVisibilityRatio / totalRatio;
@@ -182,7 +225,7 @@ export default {
         g = Math.round(interpolate(baseG, warmG, dvrVisibilityRatio));
         b = Math.round(interpolate(baseB, warmB, dvrVisibilityRatio));
       } else {
-        // Neither section is visible, use base colors
+        // No special section is visible, use base colors
         r = baseR;
         g = baseG;
         b = baseB;

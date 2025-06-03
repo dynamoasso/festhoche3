@@ -59,6 +59,16 @@
       :photos="martaPhotos"
       :initPhotoSwipe="false"
     />
+
+    <!-- Banquet Section -->
+    <GallerySection
+      v-if="banquetPhotos.length > 0"
+      title="Le Grand Banquet"
+      sectionId="banquet"
+      photoDirectory="gallery/alicja/banquet-compressed"
+      :photos="banquetPhotos"
+      :initPhotoSwipe="false"
+    />
   </div>
 </template>
 
@@ -462,6 +472,15 @@ export default {
       { src: 'gallery/alicja/danse-compressed/DSC05775.jpg', width: 1620, height: 1080, alt: 'Danse', author: alicja }
     ];
 
+    // Photos for the Banquet section
+    const banquetPhotos = [
+      // Pattern: 2 horizontal, 2 vertical
+      { src: 'gallery/alicja/banquet-compressed/DSC05982.jpg', width: 1620, height: 1080, alt: 'Le grand banquet', author: alicja },
+      { src: 'gallery/alicja/banquet-compressed/DSC05985.jpg', width: 1620, height: 1080, alt: 'Le grand banquet', author: alicja },
+      { src: 'gallery/alicja/banquet-compressed/DSC05992.jpg', width: 720, height: 1080, alt: 'Le grand banquet', author: alicja },
+      { src: 'gallery/alicja/banquet-compressed/DSC05993.jpg', width: 720, height: 1080, alt: 'Le grand banquet', author: alicja }
+    ];
+
     return {
       publicPath,
       martaPhotos,
@@ -469,7 +488,8 @@ export default {
       maevolPhotos,
       elyePhotos,
       dvrPhotos,
-      dansePhotos
+      dansePhotos,
+      banquetPhotos
     };
   }
 }

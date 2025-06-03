@@ -162,6 +162,14 @@ async function processAllImages(options = {}) {
     path.join(__dirname, '..', 'public', 'gallery', 'johann', 'festhoche3-compressed'),
     config
   );
+
+  // Compress Banquet images
+  console.log('\nCompressing Banquet images...');
+  await compressImages(
+    path.join(__dirname, '..', 'public', 'gallery', 'alicja', 'banquet'),
+    path.join(__dirname, '..', 'public', 'gallery', 'alicja', 'banquet-compressed'),
+    config
+  );
 }
 
 // Helper function to format bytes
