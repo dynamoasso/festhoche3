@@ -386,7 +386,17 @@ export default {
       { src: 'gallery/johann/dvr-compressed/31 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
       { src: 'gallery/johann/dvr-compressed/32.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
       { src: 'gallery/johann/dvr-compressed/33.JPG', width: 720, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/34.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann }
+      { src: 'gallery/johann/dvr-compressed/34.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+
+      // Pattern: 2 horizontal, 1 vertical (new photos)
+      { src: 'gallery/johann/dvr-compressed/35.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/36.JPG', width: 720, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/37.JPG', width: 720, height: 1080, alt: 'DVR', author: johann },
+
+      // Pattern: 1 vertical, 2 horizontal (new photos)
+      { src: 'gallery/johann/dvr-compressed/38.JPG', width: 720, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/39.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/40.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann }
     ];
 
     // Photos for the Danse section
