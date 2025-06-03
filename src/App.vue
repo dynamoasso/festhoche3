@@ -179,6 +179,16 @@ body {
   min-height: 100vh;
   text-align: center;
   transition: min-height 0.5s ease;
+  padding-bottom: 20px; /* Add some padding at the bottom */
+}
+
+/* Adjust landing view for mobile */
+@media (max-width: 768px) {
+  .landing-view {
+    justify-content: flex-start; /* Align to top on mobile */
+    padding-top: 10vh; /* Add some padding at the top */
+    min-height: 90vh; /* Slightly reduce height to ensure scroll indicator is visible */
+  }
 }
 
 .landing-view.scrolled {
@@ -191,6 +201,15 @@ h1 {
   font-family: 'Luckiest Guy', cursive;
   font-size: 2.2rem;
   letter-spacing: 1px;
+}
+
+/* Adjust title size and margin for mobile */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.8rem;
+    margin: 10px 0 0 0; /* Reduced margin to move scroll indicator up */
+    line-height: 1.2; /* Tighter line height for mobile */
+  }
 }
 
 .highlight-pink {
@@ -207,10 +226,17 @@ h1 {
 .poster-image {
   max-width: 100%;
   height: auto;
-  max-height: 80vh; /* Initially larger */
+  max-height: 65vh; /* Reduced height to make room for scroll indicator */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: max-height 0.5s ease;
+}
+
+/* Adjust poster size for mobile devices */
+@media (max-width: 768px) {
+  .poster-image {
+    max-height: 55vh; /* Even smaller on mobile to ensure scroll indicator is visible */
+  }
 }
 
 .scrolled .poster-image {
@@ -221,9 +247,19 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
+  margin-top: 10px; /* Reduced margin to move it up */
   opacity: 1;
   transition: opacity 0.5s ease;
+  position: relative; /* Added for better positioning */
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+/* Adjust scroll indicator for mobile devices */
+@media (max-width: 768px) {
+  .scroll-indicator {
+    margin-top: 5px; /* Even smaller margin on mobile */
+    transform: scale(1.2); /* Make it slightly larger on mobile for better visibility */
+  }
 }
 
 .scrolled .scroll-indicator {
@@ -245,6 +281,16 @@ h1 {
   animation: bounce 2s infinite;
 }
 
+/* Make arrow more visible on mobile */
+@media (max-width: 768px) {
+  .arrow-down {
+    width: 24px;
+    height: 24px;
+    border-left: 3px solid #666;
+    border-bottom: 3px solid #666;
+  }
+}
+
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     transform: translateY(0) rotate(-45deg);
@@ -254,6 +300,25 @@ h1 {
   }
   60% {
     transform: translateY(5px) rotate(-45deg);
+  }
+}
+
+/* Enhanced bounce animation for mobile */
+@media (max-width: 768px) {
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0) rotate(-45deg);
+    }
+    40% {
+      transform: translateY(15px) rotate(-45deg); /* Increased bounce distance */
+    }
+    60% {
+      transform: translateY(8px) rotate(-45deg); /* Increased bounce distance */
+    }
+  }
+
+  .arrow-down {
+    animation-duration: 1.5s; /* Slightly faster animation on mobile */
   }
 }
 
