@@ -170,6 +170,14 @@ async function processAllImages(options = {}) {
     path.join(__dirname, '..', 'public', 'gallery', 'alicja', 'banquet-compressed'),
     config
   );
+
+  // Compress Johann's Banquet images
+  console.log('\nCompressing Johann\'s Banquet images...');
+  await compressImages(
+    path.join(__dirname, '..', 'public', 'gallery', 'johann', 'banquet'),
+    path.join(__dirname, '..', 'public', 'gallery', 'johann', 'banquet-compressed'),
+    config
+  );
 }
 
 // Helper function to format bytes

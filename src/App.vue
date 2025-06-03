@@ -85,10 +85,10 @@ export default {
       const pinkG = 49;  // Low green component for pink
       const pinkB = 130; // Medium blue component for pink
 
-      // Green colors for banquet section
-      const greenR = 76;  // Low red component for green
-      const greenG = 175; // High green component for green
-      const greenB = 80;  // Low blue component for green
+      // Teal colors for banquet section (#009A9A)
+      const greenR = 0;   // No red component for teal
+      const greenG = 154; // Medium-high green component for teal
+      const greenB = 154; // Medium-high blue component for teal
 
       // Initialize with base gray colors
       r = baseR;

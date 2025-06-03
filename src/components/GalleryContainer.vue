@@ -475,10 +475,18 @@ export default {
     // Photos for the Banquet section
     const banquetPhotos = [
       // Pattern: 2 horizontal, 2 vertical
-      { src: 'gallery/alicja/banquet-compressed/DSC05982.jpg', width: 1620, height: 1080, alt: 'Le grand banquet', author: alicja },
-      { src: 'gallery/alicja/banquet-compressed/DSC05985.jpg', width: 1620, height: 1080, alt: 'Le grand banquet', author: alicja },
+      { src: 'gallery/alicja/banquet-compressed/DSC05982.jpg', width: 720, height: 1080, alt: 'Le grand banquet', author: alicja },
+      { src: 'gallery/alicja/banquet-compressed/DSC05985.jpg', width: 720, height: 1080, alt: 'Le grand banquet', author: alicja },
       { src: 'gallery/alicja/banquet-compressed/DSC05992.jpg', width: 720, height: 1080, alt: 'Le grand banquet', author: alicja },
-      { src: 'gallery/alicja/banquet-compressed/DSC05993.jpg', width: 720, height: 1080, alt: 'Le grand banquet', author: alicja }
+      { src: 'gallery/alicja/banquet-compressed/DSC05993.jpg', width: 1620, height: 1080, alt: 'Le grand banquet', author: alicja },
+
+      // Johann's banquet photos
+      // Using the actual files from johann/banquet-compressed
+      { src: 'gallery/johann/banquet-compressed/45.JPG', width: 1620, height: 1080, alt: 'Le grand banquet', author: johann },
+      { src: 'gallery/johann/banquet-compressed/47.JPG', width: 1620, height: 1080, alt: 'Le grand banquet', author: johann },
+      { src: 'gallery/johann/banquet-compressed/48.JPG', width: 1620, height: 1080, alt: 'Le grand banquet', author: johann },
+      { src: 'gallery/johann/banquet-compressed/49.JPG', width: 1620, height: 1080, alt: 'Le grand banquet', author: johann },
+      { src: 'gallery/johann/banquet-compressed/53.JPG', width: 1620, height: 1080, alt: 'Le grand banquet', author: johann }
     ];
 
     return {
