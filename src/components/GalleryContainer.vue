@@ -221,34 +221,34 @@ export default {
 
       // Johann's photos for festhoche3
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/festhoche3-compressed/02 .JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
-      { src: 'gallery/johann/festhoche3-compressed/12.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
-      { src: 'gallery/johann/festhoche3-compressed/18.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/02 .JPG',width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
+      { src: 'gallery/johann/festhoche3-compressed/12.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
+      { src: 'gallery/johann/festhoche3-compressed/18.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/johann/festhoche3-compressed/54.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
-      { src: 'gallery/johann/festhoche3-compressed/55.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
-      { src: 'gallery/johann/festhoche3-compressed/56.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/54.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
+      { src: 'gallery/johann/festhoche3-compressed/55.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
+      { src: 'gallery/johann/festhoche3-compressed/56.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/festhoche3-compressed/60.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
-      { src: 'gallery/johann/festhoche3-compressed/61.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
-      { src: 'gallery/johann/festhoche3-compressed/62.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/60.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
+      { src: 'gallery/johann/festhoche3-compressed/61.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
+      { src: 'gallery/johann/festhoche3-compressed/62.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/johann/festhoche3-compressed/63.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
-      { src: 'gallery/johann/festhoche3-compressed/65.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
-      { src: 'gallery/johann/festhoche3-compressed/66.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/63.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
+      { src: 'gallery/johann/festhoche3-compressed/65.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
+      { src: 'gallery/johann/festhoche3-compressed/66.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/festhoche3-compressed/68.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
-      { src: 'gallery/johann/festhoche3-compressed/79.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
-      { src: 'gallery/johann/festhoche3-compressed/90.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/68.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
+      { src: 'gallery/johann/festhoche3-compressed/79.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
+      { src: 'gallery/johann/festhoche3-compressed/90.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann},
 
       // Last horizontal images
-      { src: 'gallery/johann/festhoche3-compressed/101.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
-      { src: 'gallery/johann/festhoche3-compressed/112.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
-      { src: 'gallery/johann/festhoche3-compressed/126.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann }
+      { src: 'gallery/johann/festhoche3-compressed/101.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/112.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/126.JPG', width: 1300, height: 730, alt: 'Ambiance Fest\'Hoche #3', author: johann }
     ];
 
     // Initialize PhotoSwipe for all galleries
@@ -368,65 +368,65 @@ export default {
       { src: 'gallery/alicja/dvr-compressed/DSC05594.jpg', width: 1620, height: 1080, alt: 'DVR', author: alicja },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/dvr-compressed/02.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/03.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/05.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/02.JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/03.JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/05.JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/johann/dvr-compressed/07 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/08 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/09 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/07 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/08 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/09 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/dvr-compressed/10 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/11 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/12 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/10 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/11 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/12 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/johann/dvr-compressed/13 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/14 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/15 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/13 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/14 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/15 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/dvr-compressed/16 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/17 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/18 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/16 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/17 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/18 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/johann/dvr-compressed/19 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/20 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/21 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/19 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/20 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/21 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/dvr-compressed/22 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/23  copie.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/24 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/22 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/23  copie.JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/24 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/johann/dvr-compressed/25 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/26 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/27  .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/25 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/26 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/27  .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/dvr-compressed/28 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/29.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/30 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/28 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/29.JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/30 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
 
       // Last horizontal images
-      { src: 'gallery/johann/dvr-compressed/31 .JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/32.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/33.JPG', width: 720, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/34.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/31 .JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/32.JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/33.JPG', width: 606, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/34.JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
 
       // Pattern: 2 horizontal, 1 vertical (new photos)
-      { src: 'gallery/johann/dvr-compressed/35.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/36.JPG', width: 720, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/37.JPG', width: 720, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/35.JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/36.JPG', width: 606, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/37.JPG', width: 606, height: 1080, alt: 'DVR', author: johann },
 
       // Pattern: 1 vertical, 2 horizontal (new photos)
-      { src: 'gallery/johann/dvr-compressed/38.JPG', width: 720, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/39.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann },
-      { src: 'gallery/johann/dvr-compressed/40.JPG', width: 1620, height: 1080, alt: 'DVR', author: johann }
+      { src: 'gallery/johann/dvr-compressed/38.JPG', width: 606, height: 1080, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/39.JPG', width: 1300, height: 730, alt: 'DVR', author: johann },
+      { src: 'gallery/johann/dvr-compressed/40.JPG', width: 1300, height: 730, alt: 'DVR', author: johann }
     ];
 
     // Photos for the Danse section
@@ -502,11 +502,11 @@ export default {
 
       // Johann's banquet photos
       // Using the actual files from johann/banquet-compressed
-      { src: 'gallery/johann/banquet-compressed/45.JPG', width: 1620, height: 1080, alt: 'Le grand banquet', author: johann },
-      { src: 'gallery/johann/banquet-compressed/47.JPG', width: 1620, height: 1080, alt: 'Le grand banquet', author: johann },
-      { src: 'gallery/johann/banquet-compressed/48.JPG', width: 1620, height: 1080, alt: 'Le grand banquet', author: johann },
-      { src: 'gallery/johann/banquet-compressed/49.JPG', width: 1620, height: 1080, alt: 'Le grand banquet', author: johann },
-      { src: 'gallery/johann/banquet-compressed/53.JPG', width: 1620, height: 1080, alt: 'Le grand banquet', author: johann }
+      { src: 'gallery/johann/banquet-compressed/45.JPG', width: 1300, height: 730, alt: 'Le grand banquet', author: johann },
+      { src: 'gallery/johann/banquet-compressed/47.JPG', width: 1300, height: 730, alt: 'Le grand banquet', author: johann },
+      { src: 'gallery/johann/banquet-compressed/48.JPG', width: 1300, height: 730, alt: 'Le grand banquet', author: johann },
+      { src: 'gallery/johann/banquet-compressed/49.JPG', width: 1300, height: 730, alt: 'Le grand banquet', author: johann },
+      { src: 'gallery/johann/banquet-compressed/53.JPG', width: 1300, height: 730, alt: 'Le grand banquet', author: johann }
     ];
 
     // Photos for the Ateliers section
@@ -553,68 +553,68 @@ export default {
 
       // Johann's ateliers photos
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/ateliers-compressed/41.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/43.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/41.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/43.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/johann/ateliers-compressed/52.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/67.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/69.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/52.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/67.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/69.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/ateliers-compressed/70.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/71.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/72.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/70.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/71.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/72.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/johann/ateliers-compressed/73.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/74.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/75.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/73.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/74.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/75.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/ateliers-compressed/76.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/77.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/80.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/76.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/77.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/80.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/johann/ateliers-compressed/81.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/82.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/83.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/81.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/82.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/83.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/ateliers-compressed/84.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/85.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/86.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/84.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/85.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/86.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
 
       // Pattern: 1 vertical, 2 horizontal
-      { src: 'gallery/johann/ateliers-compressed/87.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/89.JPG', width: 720, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/91.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/87.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/89.JPG', width: 606, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/91.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
 
       // Pattern: 2 horizontal, 1 vertical
-      { src: 'gallery/johann/ateliers-compressed/92.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/93.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/94.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/92.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/93.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/94.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
 
       // Last horizontal images
-      { src: 'gallery/johann/ateliers-compressed/95.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/96.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/97.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/98.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/99.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/100.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/105.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
-      { src: 'gallery/johann/ateliers-compressed/106.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann }
+      { src: 'gallery/johann/ateliers-compressed/95.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/96.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/97.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/98.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/99.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/100.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/105.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/106.JPG', width: 1300, height: 730, alt: 'Les ateliers', author: johann }
     ];
 
     // Photos for the Claquettes section
     const claquettesPhotos = [
       // Johann's claquettes photos
-      { src: 'gallery/johann/claquettes-compressed/07.JPG', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: johann },
-      { src: 'gallery/johann/claquettes-compressed/107.JPG', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: johann },
-      { src: 'gallery/johann/claquettes-compressed/114.JPG', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: johann },
-      { src: 'gallery/johann/claquettes-compressed/116.JPG', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: johann },
-      { src: 'gallery/johann/claquettes-compressed/125.JPG', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: johann },
+      { src: 'gallery/johann/claquettes-compressed/07.JPG', width: 1300, height: 730, alt: 'Lancer de claquettes', author: johann },
+      { src: 'gallery/johann/claquettes-compressed/107.JPG', width: 1300, height: 730, alt: 'Lancer de claquettes', author: johann },
+      { src: 'gallery/johann/claquettes-compressed/114.JPG', width: 1300, height: 730, alt: 'Lancer de claquettes', author: johann },
+      { src: 'gallery/johann/claquettes-compressed/116.JPG', width: 1300, height: 730, alt: 'Lancer de claquettes', author: johann },
+      { src: 'gallery/johann/claquettes-compressed/125.JPG', width: 1300, height: 730, alt: 'Lancer de claquettes', author: johann },
 
       // Pattern: 2 horizontal, 1 vertical
       { src: 'gallery/alicja/claquettes-compressed/DSC06075.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
