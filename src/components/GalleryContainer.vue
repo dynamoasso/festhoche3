@@ -609,6 +609,13 @@ export default {
 
     // Photos for the Claquettes section
     const claquettesPhotos = [
+      // Johann's claquettes photos
+      { src: 'gallery/johann/claquettes-compressed/07.JPG', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: johann },
+      { src: 'gallery/johann/claquettes-compressed/107.JPG', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: johann },
+      { src: 'gallery/johann/claquettes-compressed/114.JPG', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: johann },
+      { src: 'gallery/johann/claquettes-compressed/116.JPG', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: johann },
+      { src: 'gallery/johann/claquettes-compressed/125.JPG', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: johann },
+
       // Pattern: 2 horizontal, 1 vertical
       { src: 'gallery/alicja/claquettes-compressed/DSC06075.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
       { src: 'gallery/alicja/claquettes-compressed/DSC06077.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
@@ -643,7 +650,7 @@ export default {
       { src: 'gallery/alicja/claquettes-compressed/DSC06114.jpg', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: alicja },
       { src: 'gallery/alicja/claquettes-compressed/DSC06116.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
       { src: 'gallery/alicja/claquettes-compressed/DSC06119.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
-      { src: 'gallery/alicja/claquettes-compressed/DSC06123.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja }
+      { src: 'gallery/alicja/claquettes-compressed/DSC06123.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
     ];
 
     return {

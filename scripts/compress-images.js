@@ -202,6 +202,14 @@ async function processAllImages(options = {}) {
     path.join(__dirname, '..', 'public', 'gallery', 'alicja', 'claquettes-compressed'),
     config
   );
+
+  // Compress Johann's Claquettes images
+  console.log('\nCompressing Johann\'s Claquettes images...');
+  await compressImages(
+    path.join(__dirname, '..', 'public', 'gallery', 'johann', 'claquettes'),
+    path.join(__dirname, '..', 'public', 'gallery', 'johann', 'claquettes-compressed'),
+    config
+  );
 }
 
 // Helper function to format bytes
