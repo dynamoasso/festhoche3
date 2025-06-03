@@ -8,7 +8,7 @@
         </div>
         <div class="photographer-info">
           <h3>Alicja Pakulska</h3>
-          <p>Photographe passionnée capturant l'essence des moments musicaux et artistiques avec une sensibilité unique.</p>
+<!--          <p>Bio</p>-->
           <div class="social-links">
             <a href="https://alicjapakulska.myportfolio.com/" target="_blank" rel="noopener noreferrer">
               <span class="social-icon">🌐</span> Site Web
@@ -29,7 +29,7 @@
         </div>
         <div class="photographer-info">
           <h3>Johann Aubin</h3>
-          <p>Artiste visuel dont l'objectif capture l'émotion et l'énergie des performances live avec un style distinctif.</p>
+<!--          <p>Bio</p>-->
           <div class="social-links">
             <a href="https://www.instagram.com/_johann_illustrations_/" target="_blank" rel="noopener noreferrer">
               <span class="social-icon">📸</span> Instagram
