@@ -154,6 +154,14 @@ async function processAllImages(options = {}) {
     path.join(__dirname, '..', 'public', 'gallery', 'johann', 'dvr-compressed'),
     config
   );
+
+  // Compress Johann's Festhoche3 images
+  console.log('\nCompressing Johann\'s Festhoche3 images...');
+  await compressImages(
+    path.join(__dirname, '..', 'public', 'gallery', 'johann', 'festhoche3'),
+    path.join(__dirname, '..', 'public', 'gallery', 'johann', 'festhoche3-compressed'),
+    config
+  );
 }
 
 // Helper function to format bytes

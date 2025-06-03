@@ -189,6 +189,36 @@ export default {
       { src: 'gallery/alicja/festhoche3-compressed/DSC06002.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
       { src: 'gallery/alicja/festhoche3-compressed/DSC06144.jpg', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: alicja },
 
+      // Johann's photos for festhoche3
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/festhoche3-compressed/02 .JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/12.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/18.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/johann/festhoche3-compressed/54.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/55.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/56.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/festhoche3-compressed/60.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/61.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/62.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/johann/festhoche3-compressed/63.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/65.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/66.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/festhoche3-compressed/68.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/79.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/90.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+
+      // Last horizontal images
+      { src: 'gallery/johann/festhoche3-compressed/101.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/112.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann },
+      { src: 'gallery/johann/festhoche3-compressed/126.JPG', width: 1620, height: 1080, alt: 'Ambiance Fest\'Hoche #3', author: johann }
     ];
 
     // Initialize PhotoSwipe for all galleries
