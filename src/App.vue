@@ -78,11 +78,52 @@ export default {
       const warmG = 192; // Reduce green slightly
       const warmB = 112; // Reduce blue significantly for yellow
 
+      // Pink colors for ambiance section (using the pink from the title #E83182)
+      const pinkR = 232; // High red component for pink
+      const pinkG = 49;  // Low green component for pink
+      const pinkB = 130; // Medium blue component for pink
+
       // Initialize with base gray colors
       r = baseR;
       g = baseG;
       b = baseB;
 
+      // Variables to track if sections are visible
+      let festhocheVisible = false;
+      let festhocheVisibilityRatio = 0;
+      let dvrVisible = false;
+      let dvrVisibilityRatio = 0;
+
+      // Check for ambiance section (festhoche)
+      if (festhocheSection) {
+        const festhocheRect = festhocheSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Check if ambiance section is visible or we're in its vicinity
+        if (festhocheRect.top < windowHeight * 1.5 && festhocheRect.bottom > -windowHeight * 0.5) {
+          // Calculate how centered the ambiance section is in the viewport
+          // 1 when fully centered, 0 when just entering or leaving
+          const visibleHeight = Math.min(festhocheRect.bottom, windowHeight) - Math.max(festhocheRect.top, 0);
+          festhocheVisibilityRatio = Math.min(1, visibleHeight / Math.min(festhocheRect.height, windowHeight));
+
+          // Enhance visibility ratio to create a smoother transition
+          // This creates a bell curve effect that peaks when the section is centered
+          if (festhocheRect.top <= 0 && festhocheRect.bottom >= windowHeight) {
+            // Section fills the viewport - maximum effect
+            festhocheVisibilityRatio = 1;
+          } else if (festhocheRect.top > 0) {
+            // Section is entering from the bottom - gradual increase
+            festhocheVisibilityRatio = Math.pow(festhocheVisibilityRatio, 0.7);
+          } else if (festhocheRect.bottom < windowHeight) {
+            // Section is leaving from the top - gradual decrease
+            festhocheVisibilityRatio = Math.pow(festhocheVisibilityRatio, 0.7);
+          }
+
+          festhocheVisible = festhocheVisibilityRatio > 0;
+        }
+      }
+
+      // Check for DVR section (independent of festhoche section)
       if (dvrSection) {
         const dvrRect = dvrSection.getBoundingClientRect();
         const windowHeight = window.innerHeight;
@@ -92,28 +133,56 @@ export default {
           // Calculate how centered the DVR section is in the viewport
           // 1 when fully centered, 0 when just entering or leaving
           const visibleHeight = Math.min(dvrRect.bottom, windowHeight) - Math.max(dvrRect.top, 0);
-          let visibilityRatio = Math.min(1, visibleHeight / Math.min(dvrRect.height, windowHeight));
+          dvrVisibilityRatio = Math.min(1, visibleHeight / Math.min(dvrRect.height, windowHeight));
 
           // Enhance visibility ratio to create a smoother transition
           // This creates a bell curve effect that peaks when the section is centered
           if (dvrRect.top <= 0 && dvrRect.bottom >= windowHeight) {
             // Section fills the viewport - maximum effect
-            visibilityRatio = 1;
+            dvrVisibilityRatio = 1;
           } else if (dvrRect.top > 0) {
             // Section is entering from the bottom - gradual increase
-            visibilityRatio = Math.pow(visibilityRatio, 0.7);
+            dvrVisibilityRatio = Math.pow(dvrVisibilityRatio, 0.7);
           } else if (dvrRect.bottom < windowHeight) {
             // Section is leaving from the top - gradual decrease
-            visibilityRatio = Math.pow(visibilityRatio, 0.7);
+            dvrVisibilityRatio = Math.pow(dvrVisibilityRatio, 0.7);
           }
 
-          // Apply warm colors based on visibility ratio
-          r = Math.round(interpolate(baseR, warmR, visibilityRatio));
-          g = Math.round(interpolate(baseG, warmG, visibilityRatio));
-          b = Math.round(interpolate(baseB, warmB, visibilityRatio));
+          dvrVisible = dvrVisibilityRatio > 0;
         }
+      }
+
+      // Apply colors based on visibility of sections
+      if (festhocheVisible && dvrVisible) {
+        // Both sections are visible, blend colors based on visibility ratios
+        const totalRatio = festhocheVisibilityRatio + dvrVisibilityRatio;
+        const festhocheWeight = festhocheVisibilityRatio / totalRatio;
+        const dvrWeight = dvrVisibilityRatio / totalRatio;
+
+        // Calculate blended colors
+        const pinkContributionR = pinkR * festhocheWeight;
+        const pinkContributionG = pinkG * festhocheWeight;
+        const pinkContributionB = pinkB * festhocheWeight;
+
+        const warmContributionR = warmR * dvrWeight;
+        const warmContributionG = warmG * dvrWeight;
+        const warmContributionB = warmB * dvrWeight;
+
+        r = Math.round(pinkContributionR + warmContributionR);
+        g = Math.round(pinkContributionG + warmContributionG);
+        b = Math.round(pinkContributionB + warmContributionB);
+      } else if (festhocheVisible) {
+        // Only festhoche section is visible
+        r = Math.round(interpolate(baseR, pinkR, festhocheVisibilityRatio));
+        g = Math.round(interpolate(baseG, pinkG, festhocheVisibilityRatio));
+        b = Math.round(interpolate(baseB, pinkB, festhocheVisibilityRatio));
+      } else if (dvrVisible) {
+        // Only DVR section is visible
+        r = Math.round(interpolate(baseR, warmR, dvrVisibilityRatio));
+        g = Math.round(interpolate(baseG, warmG, dvrVisibilityRatio));
+        b = Math.round(interpolate(baseB, warmB, dvrVisibilityRatio));
       } else {
-        // Fallback if DVR section not found
+        // Neither section is visible, use base colors
         r = baseR;
         g = baseG;
         b = baseB;
