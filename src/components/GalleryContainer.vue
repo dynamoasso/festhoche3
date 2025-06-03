@@ -539,7 +539,62 @@ export default {
       // Pattern: 1 vertical, 2 horizontal
       { src: 'gallery/alicja/ateliers-compressed/DSC06020.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
       { src: 'gallery/alicja/ateliers-compressed/DSC06021.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
-      { src: 'gallery/alicja/ateliers-compressed/DSC06023.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja }
+      { src: 'gallery/alicja/ateliers-compressed/DSC06023.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
+
+      // Johann's ateliers photos
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/ateliers-compressed/41.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/43.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/johann/ateliers-compressed/52.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/67.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/69.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/ateliers-compressed/70.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/71.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/72.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/johann/ateliers-compressed/73.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/74.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/75.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/ateliers-compressed/76.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/77.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/80.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/johann/ateliers-compressed/81.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/82.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/83.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/ateliers-compressed/84.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/85.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/86.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/johann/ateliers-compressed/87.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/89.JPG', width: 720, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/91.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/johann/ateliers-compressed/92.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/93.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/94.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+
+      // Last horizontal images
+      { src: 'gallery/johann/ateliers-compressed/95.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/96.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/97.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/98.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/99.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/100.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/105.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann },
+      { src: 'gallery/johann/ateliers-compressed/106.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann }
     ];
 
     return {

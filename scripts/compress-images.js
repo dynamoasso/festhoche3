@@ -179,6 +179,14 @@ async function processAllImages(options = {}) {
     config
   );
 
+  // Compress Johann's Ateliers images
+  console.log('\nCompressing Johann\'s Ateliers images...');
+  await compressImages(
+    path.join(__dirname, '..', 'public', 'gallery', 'johann', 'ateliers'),
+    path.join(__dirname, '..', 'public', 'gallery', 'johann', 'ateliers-compressed'),
+    config
+  );
+
   // Compress Alicja's Workshop images
   console.log('\nCompressing Alicja\'s Workshop images...');
   await compressImages(
