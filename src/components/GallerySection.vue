@@ -205,48 +205,32 @@ export default {
   }
 }
 
+
+
 @media (max-width: 768px) {
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .horizontal {
-    grid-column: span 2;
-  }
-
-  .vertical {
-    grid-column: span 1;
-  }
-
-  /* In 2-column grid, horizontal images already span the full width, so no special centering needed */
-}
-
-@media (max-width: 480px) {
-  .gallery {
     grid-template-columns: 1fr;
-  }
-
-  .horizontal, .vertical {
-    grid-column: span 1;
-    grid-row: auto;
-  }
-
-  /* Force single column layout for all sections, especially Marta section */
-  #marta .gallery {
-    grid-template-columns: 1fr !important;
+    /* Force flex layout for all sections on mobile to ensure single column */
     display: flex !important;
     flex-direction: column !important;
   }
 
-  #marta .horizontal, #marta .vertical {
+  .horizontal, .vertical {
     grid-column: span 1 !important;
     grid-row: auto !important;
     width: 100% !important;
   }
 
-  #marta .gallery a img {
+  .gallery a img {
     width: 100% !important;
     height: auto !important;
+    max-width: 100% !important;
+  }
+
+  /* Ensure no images are displayed side by side */
+  .photo-container {
+    width: 100% !important;
+    max-width: 100% !important;
   }
 
   /* Add padding at the bottom to ensure last photos are visible above the side menu */
