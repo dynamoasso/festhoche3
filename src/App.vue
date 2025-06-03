@@ -1,6 +1,9 @@
 <template>
   <div id="app">
     <header>
+      <div class="poster-container">
+        <img :src="`${publicPath}Festhoche-affiche-2025.png`" alt="Affiche du Fest'Hoche" class="poster-image" />
+      </div>
       <h1>Galerie photos du Fest'Hoche #3</h1>
     </header>
     <main>
@@ -26,6 +29,9 @@ export default {
     // Starting with a very light gray (#e0e0e0) at the top
     // Ending with a darker gray (#2c2c2c) at the bottom
     const backgroundColor = ref('#e0e0e0');
+
+    // Get the public path for assets
+    const publicPath = process.env.BASE_URL || '/';
 
     // Define sections for the side menu
     const sections = [
@@ -128,7 +134,8 @@ export default {
 
     return {
       backgroundColor,
-      sections
+      sections,
+      publicPath
     };
   }
 }
@@ -161,8 +168,22 @@ header {
 
 h1 {
   color: #333333; /* Darker text for better contrast on light background */
-  margin: 0;
+  margin: 20px 0 0 0;
   font-weight: 300;
   letter-spacing: 1px;
+}
+
+.poster-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.poster-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 </style>
