@@ -47,7 +47,8 @@ export default {
       { id: 'maevol', title: 'Maevol' },
       { id: 'elye', title: 'Elye & The Hydra' },
       { id: 'marta', title: 'Marta' },
-      { id: 'banquet', title: 'Le grand banquet' }
+      { id: 'banquet', title: 'Le grand banquet' },
+      { id: 'ateliers', title: 'Les ateliers' }
     ];
 
     // Function to handle scroll event with section-specific colors
@@ -65,6 +66,7 @@ export default {
       const festhocheSection = document.getElementById('festhoche');
       const dvrSection = document.getElementById('dvr');
       const banquetSection = document.getElementById('banquet');
+      const ateliersSection = document.getElementById('ateliers');
       const maevolSection = document.getElementById('maevol');
 
       // Default colors (light gray to dark gray)
@@ -90,6 +92,11 @@ export default {
       const greenG = 154; // Medium-high green component for teal
       const greenB = 154; // Medium-high blue component for teal
 
+      // Lighter teal colors for ateliers section (lighter version of banquet color)
+      const lightGreenR = 80;  // Higher red component for lighter teal
+      const lightGreenG = 200; // Higher green component for lighter teal
+      const lightGreenB = 200; // Higher blue component for lighter teal
+
       // Initialize with base gray colors
       r = baseR;
       g = baseG;
@@ -102,6 +109,8 @@ export default {
       let dvrVisibilityRatio = 0;
       let banquetVisible = false;
       let banquetVisibilityRatio = 0;
+      let ateliersVisible = false;
+      let ateliersVisibilityRatio = 0;
 
       // Check for ambiance section (festhoche)
       if (festhocheSection) {
@@ -190,9 +199,44 @@ export default {
         }
       }
 
+      // Check for Ateliers section (independent of other sections)
+      if (ateliersSection) {
+        const ateliersRect = ateliersSection.getBoundingClientRect();
+        const windowHeight = window.innerHeight;
+
+        // Check if Ateliers section is visible or we're in its vicinity
+        if (ateliersRect.top < windowHeight * 1.5 && ateliersRect.bottom > -windowHeight * 0.5) {
+          // Calculate how centered the Ateliers section is in the viewport
+          // 1 when fully centered, 0 when just entering or leaving
+          const visibleHeight = Math.min(ateliersRect.bottom, windowHeight) - Math.max(ateliersRect.top, 0);
+          ateliersVisibilityRatio = Math.min(1, visibleHeight / Math.min(ateliersRect.height, windowHeight));
+
+          // Enhance visibility ratio to create a smoother transition
+          // This creates a bell curve effect that peaks when the section is centered
+          if (ateliersRect.top <= 0 && ateliersRect.bottom >= windowHeight) {
+            // Section fills the viewport - maximum effect
+            ateliersVisibilityRatio = 1;
+          } else if (ateliersRect.top > 0) {
+            // Section is entering from the bottom - gradual increase
+            ateliersVisibilityRatio = Math.pow(ateliersVisibilityRatio, 0.7);
+          } else if (ateliersRect.bottom < windowHeight) {
+            // Section is leaving from the top - gradual decrease
+            ateliersVisibilityRatio = Math.pow(ateliersVisibilityRatio, 0.7);
+          }
+
+          ateliersVisible = ateliersVisibilityRatio > 0;
+        }
+      }
+
       // Apply colors based on visibility of sections
-      if (banquetVisible) {
-        // Banquet section is visible (takes priority)
+      if (ateliersVisible) {
+        // Ateliers section is visible (takes priority)
+        // Start with the banquet color and make it lighter
+        r = Math.round(interpolate(greenR, lightGreenR, ateliersVisibilityRatio));
+        g = Math.round(interpolate(greenG, lightGreenG, ateliersVisibilityRatio));
+        b = Math.round(interpolate(greenB, lightGreenB, ateliersVisibilityRatio));
+      } else if (banquetVisible) {
+        // Banquet section is visible (takes priority after ateliers)
         r = Math.round(interpolate(baseR, greenR, banquetVisibilityRatio));
         g = Math.round(interpolate(baseG, greenG, banquetVisibilityRatio));
         b = Math.round(interpolate(baseB, greenB, banquetVisibilityRatio));

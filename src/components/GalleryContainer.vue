@@ -69,6 +69,16 @@
       :photos="banquetPhotos"
       :initPhotoSwipe="false"
     />
+
+    <!-- Ateliers Section -->
+    <GallerySection
+      v-if="ateliersPhotos.length > 0"
+      title="Les ateliers"
+      sectionId="ateliers"
+      photoDirectory="gallery/alicja/ateliers-compressed"
+      :photos="ateliersPhotos"
+      :initPhotoSwipe="false"
+    />
   </div>
 </template>
 
@@ -489,6 +499,49 @@ export default {
       { src: 'gallery/johann/banquet-compressed/53.JPG', width: 1620, height: 1080, alt: 'Le grand banquet', author: johann }
     ];
 
+    // Photos for the Ateliers section
+    const ateliersPhotos = [
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/alicja/ateliers-compressed/DSC05973.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC05974.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC05975.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/alicja/ateliers-compressed/DSC05976.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC05977.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06004.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/alicja/ateliers-compressed/DSC06005.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06006.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06007.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/alicja/ateliers-compressed/DSC06008.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06009.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06010.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/alicja/ateliers-compressed/DSC06011.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06012.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06013.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/alicja/ateliers-compressed/DSC06014.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06015.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06016.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/alicja/ateliers-compressed/DSC06017.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06018.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06019.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/alicja/ateliers-compressed/DSC06020.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06021.jpg', width: 720, height: 1080, alt: 'Les ateliers', author: alicja },
+      { src: 'gallery/alicja/ateliers-compressed/DSC06023.jpg', width: 1620, height: 1080, alt: 'Les ateliers', author: alicja }
+    ];
+
     return {
       publicPath,
       martaPhotos,
@@ -497,7 +550,8 @@ export default {
       elyePhotos,
       dvrPhotos,
       dansePhotos,
-      banquetPhotos
+      banquetPhotos,
+      ateliersPhotos
     };
   }
 }
