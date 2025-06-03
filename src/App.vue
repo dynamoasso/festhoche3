@@ -1,15 +1,18 @@
 <template>
   <div id="app">
-    <header>
+    <div class="landing-view" :class="{ 'scrolled': hasScrolled }">
       <div class="poster-container">
         <img :src="`${publicPath}Festhoche-affiche-2025.png`" alt="Affiche du Fest'Hoche" class="poster-image" />
       </div>
-      <h1>Galerie photos du Fest'Hoche #3</h1>
-    </header>
-    <main>
+      <h1>La Galerie <span class="highlight-pink">PHOTOS</span> du Fest'Hoche #3</h1>
+      <div class="scroll-indicator">
+        <div class="arrow-down"></div>
+      </div>
+    </div>
+    <main :class="{ 'visible': hasScrolled }">
       <GalleryContainer />
     </main>
-    <SideMenu :sections="sections" />
+    <SideMenu :sections="sections" :class="{ 'visible': hasScrolled }" />
   </div>
 </template>
 
@@ -30,6 +33,9 @@ export default {
     // Ending with a darker gray (#2c2c2c) at the bottom
     const backgroundColor = ref('#e0e0e0');
 
+    // Track if user has scrolled
+    const hasScrolled = ref(false);
+
     // Get the public path for assets
     const publicPath = process.env.BASE_URL || '/';
 
@@ -49,6 +55,10 @@ export default {
       // 0 at the top of the page, 1 when we've scrolled to the bottom
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
       const scrollProgress = Math.min(1, Math.max(0, window.scrollY / scrollHeight));
+
+      // Update hasScrolled based on scroll position
+      // Consider the user has scrolled if they've moved more than 100px down
+      hasScrolled.value = window.scrollY > 100;
 
       // Get positions of all sections to determine where we are in the page
       const festhocheSection = document.getElementById('festhoche');
@@ -135,7 +145,8 @@ export default {
     return {
       backgroundColor,
       sections,
-      publicPath
+      publicPath,
+      hasScrolled
     };
   }
 }
@@ -149,6 +160,7 @@ body {
   background: #e0e0e0; /* Starting with a very light gray */
   min-height: 100vh;
   transition: background-color 0.5s ease;
+  overflow-x: hidden;
 }
 
 #app {
@@ -159,31 +171,110 @@ body {
   border-radius: 0;
 }
 
-header {
+.landing-view {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
   text-align: center;
-  margin-bottom: 30px;
-  padding-bottom: 15px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Darker border for better visibility on light background */
+  transition: min-height 0.5s ease;
+}
+
+.landing-view.scrolled {
+  min-height: auto;
 }
 
 h1 {
-  color: #333333; /* Darker text for better contrast on light background */
+  color: #084052; /* Blue color from the poster */
   margin: 20px 0 0 0;
-  font-weight: 300;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2.2rem;
   letter-spacing: 1px;
+}
+
+.highlight-pink {
+  color: #E83182; /* Pink color from the poster */
 }
 
 .poster-container {
   display: flex;
   justify-content: center;
   margin-bottom: 20px;
+  transition: all 0.5s ease;
 }
 
 .poster-image {
   max-width: 100%;
   height: auto;
-  max-height: 300px;
+  max-height: 80vh; /* Initially larger */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: max-height 0.5s ease;
+}
+
+.scrolled .poster-image {
+  max-height: 300px; /* Reduced size after scrolling */
+}
+
+.scroll-indicator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+
+.scrolled .scroll-indicator {
+  opacity: 0;
+}
+
+.scroll-indicator span {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.arrow-down {
+  width: 20px;
+  height: 20px;
+  border-left: 2px solid #666;
+  border-bottom: 2px solid #666;
+  transform: rotate(-45deg);
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0) rotate(-45deg);
+  }
+  40% {
+    transform: translateY(10px) rotate(-45deg);
+  }
+  60% {
+    transform: translateY(5px) rotate(-45deg);
+  }
+}
+
+main {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+main.visible {
+  opacity: 1;
+}
+
+/* Side Menu styling */
+.side-menu {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none; /* Prevent interaction when hidden */
+}
+
+.side-menu.visible {
+  opacity: 1;
+  pointer-events: auto; /* Allow interaction when visible */
 }
 </style>
