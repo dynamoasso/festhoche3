@@ -79,6 +79,16 @@
       :photos="ateliersPhotos"
       :initPhotoSwipe="false"
     />
+
+    <!-- Claquettes Section -->
+    <GallerySection
+      v-if="claquettesPhotos.length > 0"
+      title="Lancer de claquettes"
+      sectionId="claquettes"
+      photoDirectory="gallery/alicja/claquettes-compressed"
+      :photos="claquettesPhotos"
+      :initPhotoSwipe="false"
+    />
   </div>
 </template>
 
@@ -597,6 +607,45 @@ export default {
       { src: 'gallery/johann/ateliers-compressed/106.JPG', width: 1620, height: 1080, alt: 'Les ateliers', author: johann }
     ];
 
+    // Photos for the Claquettes section
+    const claquettesPhotos = [
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/alicja/claquettes-compressed/DSC06075.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06077.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06078.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/alicja/claquettes-compressed/DSC06079.jpg', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06084.jpg', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06085.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/alicja/claquettes-compressed/DSC06086.jpg', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06088.jpg', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06089.jpg', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/alicja/claquettes-compressed/DSC06090.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06094.jpg', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06098.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+
+      // Pattern: 2 horizontal, 1 vertical
+      { src: 'gallery/alicja/claquettes-compressed/DSC06099.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06101.jpg', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06103.jpg', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+
+      // Pattern: 1 vertical, 2 horizontal
+      { src: 'gallery/alicja/claquettes-compressed/DSC06104.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06109.jpg', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06112.jpg', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+
+      // Last horizontal images
+      { src: 'gallery/alicja/claquettes-compressed/DSC06114.jpg', width: 1620, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06116.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06119.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja },
+      { src: 'gallery/alicja/claquettes-compressed/DSC06123.jpg', width: 720, height: 1080, alt: 'Lancer de claquettes', author: alicja }
+    ];
+
     return {
       publicPath,
       martaPhotos,
@@ -606,7 +655,8 @@ export default {
       dvrPhotos,
       dansePhotos,
       banquetPhotos,
-      ateliersPhotos
+      ateliersPhotos,
+      claquettesPhotos
     };
   }
 }
