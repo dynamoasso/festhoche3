@@ -4,7 +4,7 @@
       <div class="poster-container">
         <img :src="`${publicPath}Festhoche-affiche-2025.png`" alt="Affiche du Fest'Hoche" class="poster-image" />
       </div>
-      <h1>La Galerie <span class="highlight-pink">PHOTOS</span> du Fest'Hoche #3</h1>
+      <h1>La Galerie <span class="highlight-pink">PHOTOS</span> du Fest'Hoche <span class="highlight-yellow">#3</span></h1>
       <div class="scroll-indicator">
         <div class="arrow-down"></div>
       </div>
@@ -283,6 +283,10 @@ h1 {
 
 .highlight-pink {
   color: #E83182; /* Pink color from the poster */
+}
+
+.highlight-yellow {
+  color: #F59C36; /* Yellow color for #3 */
 }
 
 .poster-container {
