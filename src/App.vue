@@ -84,10 +84,10 @@ export default {
       const warmG = 192; // Reduce green slightly
       const warmB = 112; // Reduce blue significantly for yellow
 
-      // Pink colors for ambiance section (using the pink from the title #E83182)
-      const pinkR = 232; // High red component for pink
-      const pinkG = 49;  // Low green component for pink
-      const pinkB = 130; // Medium blue component for pink
+      // Softer pink colors for ambiance section (modified from the original #E83182)
+      const pinkR = 240; // Slightly higher red component for softer pink
+      const pinkG = 140; // Higher green component for softer pink
+      const pinkB = 180; // Higher blue component for softer pink
 
       // Teal colors for banquet section (#009A9A)
       const greenR = 0;   // No red component for teal
